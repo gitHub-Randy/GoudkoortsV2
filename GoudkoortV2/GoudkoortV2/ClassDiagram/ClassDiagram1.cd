@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GoudkoortV2.RailWay">
+    <Position X="10" Y="5.5" Width="1.5" />
+    <AssociationLine Name="_shedA" Type="GoudkoortV2.StaticObject" FixedFromPoint="true">
+      <Path>
+        <Point X="10.75" Y="6.603" />
+        <Point X="10.75" Y="7.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_shedB" Type="GoudkoortV2.StaticObject" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="6.188" />
+        <Point X="11.875" Y="6.188" />
+        <Point X="11.875" Y="7.312" />
+        <Point X="11.5" Y="7.312" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_shedC" Type="GoudkoortV2.StaticObject" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10" Y="6.125" />
+        <Point X="9.625" Y="6.125" />
+        <Point X="9.625" Y="7.375" />
+        <Point X="10" Y="7.375" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Domain\RailWay.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_shedA" />
+      <Field Name="_shedB" />
+      <Field Name="_shedC" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GoudkoortV2.Shed">
+    <Position X="8" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Shed.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.StaticObject">
+    <Position X="10" Y="7.25" Width="1.5" />
+    <AssociationLine Name="_next" Type="GoudkoortV2.StaticObject" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="7.5" />
+        <Point X="11.75" Y="7.5" />
+        <Point X="11.75" Y="7.938" />
+        <Point X="11.5" Y="7.938" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAACAAAA=</HashCode>
+      <FileName>Domain\StaticObject.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_next" />
+      <Property Name="_object" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GoudkoortV2.Rail">
+    <Position X="10" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Rail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.RailSwitch">
+    <Position X="10" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\RailSwitch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.ArrangeRail">
+    <Position X="12.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\ArrangeRail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.WhiteSpace">
+    <Position X="12.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\WhiteSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.LoadableObject">
+    <Position X="4" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\LoadableObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.PierRail">
+    <Position X="7.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Domain\PierRail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.Wagon">
+    <Position X="2" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Wagon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.Ship">
+    <Position X="5.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Ship.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.Program">
+    <Position X="0.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="controller" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GoudkoortV2.MainController">
+    <Position X="4.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAQ=</HashCode>
+      <FileName>MainController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_game" />
+      <Field Name="_menu" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GoudkoortV2.GameController">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <AssociationLine Name="_railView" Type="GoudkoortV2.RailWayView" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.188" Y="3.5" />
+        <Point X="10.188" Y="2" />
+        <Point X="8" Y="2" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_scoreView" Type="GoudkoortV2.ScoreView" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.438" Y="3.5" />
+        <Point X="11.438" Y="1.954" />
+        <Point X="13.5" Y="1.954" />
+        <Point X="13.5" Y="1.938" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_controlView" Type="GoudkoortV2.ControlView" FixedFromPoint="true">
+      <Path>
+        <Point X="10.75" Y="3.5" />
+        <Point X="10.75" Y="1.368" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAABAIAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAgAAAAAI=</HashCode>
+      <FileName>GameController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_railView" />
+      <Field Name="_scoreView" />
+      <Field Name="_controlView" />
+      <Field Name="_domain" />
+      <Field Name="_levelMaker" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GoudkoortV2.RailWayView">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RailWayView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.MenuView">
+    <Position X="4.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MenuView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.ScoreView">
+    <Position X="13.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScoreView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.ControlView">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ControlView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.LevelMaker">
+    <Position X="13.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LevelMaker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
