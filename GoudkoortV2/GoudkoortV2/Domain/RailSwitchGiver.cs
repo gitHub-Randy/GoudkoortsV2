@@ -7,14 +7,14 @@ namespace GoudkoortV2
 {
     public class RailSwitchGiver :RailSwitch
     {
-        private StaticObject upperNext;
+        private StaticObject underNext;
         
 
 
-        public StaticObject UpperPrev
+        public StaticObject UnderNext
         {
-            get { return upperNext; }
-            set { upperNext = value; }
+            get { return underNext; }
+            set { underNext = value; }
         }
 
       

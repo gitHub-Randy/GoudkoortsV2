@@ -7,7 +7,8 @@ namespace GoudkoortV2
     {
         // Generates All Model Objects and links them
         List<Rail> railObjects = new List<Rail>();
-        List<RailSwitch> railSwitches = new List<RailSwitch>();
+        List<RailSwitchTaker> railSwitchTakers = new List<RailSwitchTaker>();
+        List<RailSwitchGiver> railSwitchGivers = new List<RailSwitchGiver>();
         List<ArrangeRail> arrangeRails = new List<ArrangeRail>();
         PierRail pier = new PierRail();
         Shed shedA;
@@ -95,11 +96,11 @@ namespace GoudkoortV2
                         case 'S':
                             
                             Object[i, j] = new RailSwitchTaker();
-                            railSwitches.Add((RailSwitch)Object[i, j]);
+                            railSwitchTakers.Add((RailSwitchTaker)Object[i, j]);
                             break;
                         case 's':
                             Object[i, j] = new RailSwitchGiver();
-                            railSwitches.Add((RailSwitch)Object[i, j]);
+                            railSwitchGivers.Add((RailSwitchGiver)Object[i, j]);
                             break;
                         default:
                             break;
@@ -178,7 +179,11 @@ namespace GoudkoortV2
             LinkTwoObjects(Object[7, 8], Object[6, 8]);
             LinkTwoObjects(Object[6, 8], Object[6, 9]);
             LinkTwoObjects(Object[6, 9], Object[5, 9]);
-            
+            railSwitchTakers[1].UnderPrev = Object[6, 3];
+            railSwitchTakers[1].UpperPrev = Object[4, 3];
+            railSwitchGivers[0].
+
+
         }
 
 
