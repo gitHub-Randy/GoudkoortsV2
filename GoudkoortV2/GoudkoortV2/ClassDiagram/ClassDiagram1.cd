@@ -82,7 +82,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="GoudkoortV2.WhiteSpace">
-    <Position X="12.5" Y="9.25" Width="1.5" />
+    <Position X="13.25" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\WhiteSpace.cs</FileName>
@@ -203,22 +203,22 @@
   <Class Name="GoudkoortV2.LevelMaker">
     <Position X="13.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACABAAAAAAAAABAAAAgAQAAAAAQAAAAAABABAAA=</HashCode>
+      <HashCode>AAAAAAABAAAAAABgAJAAAAgAQAKAAAQAAAAAABSBAAA=</HashCode>
       <FileName>Controler\LevelMaker.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudkoortV2.RailSwitchTaker">
     <Position X="8.75" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>RailSwitchTaker.cs</FileName>
+      <HashCode>AAAAAAAACAAAAAgAAAACAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\RailSwitchTaker.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudkoortV2.RailSwitchGiver">
     <Position X="11" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>RailSwitchGiver.cs</FileName>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\RailSwitchGiver.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

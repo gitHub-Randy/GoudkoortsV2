@@ -20,6 +20,7 @@ namespace GoudkoortV2
             _railView = new RailWayView();
             _scoreView = new ScoreView();
             _controlView = new ControlView();
+            _levelMaker.PrintArr();
         }
     }
 }
