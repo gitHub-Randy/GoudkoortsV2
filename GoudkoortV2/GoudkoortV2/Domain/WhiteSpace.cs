@@ -7,6 +7,10 @@ namespace GoudkoortV2
 {
     public class WhiteSpace : StaticObject
     {
+        public WhiteSpace()
+        {
+            this.Symbol = '.';
+        }
         // Can obtain a wagon and deletes it
         public void DeleteObject()
         {

@@ -10,7 +10,10 @@ namespace GoudkoortV2
         private StaticObject upperPrev;
         private StaticObject underPrev;
 
-
+        public RailSwitchTaker()
+        {
+            this.Symbol = 'S';
+        }
         public StaticObject UpperPrev
         {
             get { return upperPrev; }

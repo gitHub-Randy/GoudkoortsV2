@@ -9,6 +9,13 @@ namespace GoudkoortV2
     {
         protected StaticObject _next;
         protected LoadableObject _object;
+        protected char symbol;
+
+        public char Symbol
+        {
+            get { return this.symbol; }
+            set { this.symbol = value; }
+        }
 
 
         public StaticObject Next

@@ -9,6 +9,10 @@ namespace GoudkoortV2
     {
         // can obtain a Wagon and can hold onto it
 
+            public ArrangeRail()
+        {
+            this.Symbol = 'O';
+        }
         public void LockWagon()
         {
 

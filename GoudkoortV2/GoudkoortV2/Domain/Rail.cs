@@ -7,6 +7,10 @@ namespace GoudkoortV2
 {
     public  class Rail : StaticObject
     {
+        public Rail()
+        {
+            this.Symbol = '-';
+        }
         // is the base Rail and can obtain a Object 
         protected  bool PlaceObject()
         {

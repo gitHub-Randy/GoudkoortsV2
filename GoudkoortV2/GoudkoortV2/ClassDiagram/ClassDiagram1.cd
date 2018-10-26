@@ -12,16 +12,16 @@
       <Path>
         <Point X="11.5" Y="6.188" />
         <Point X="11.875" Y="6.188" />
-        <Point X="11.875" Y="7.343" />
-        <Point X="11.5" Y="7.343" />
+        <Point X="11.875" Y="7.389" />
+        <Point X="11.5" Y="7.389" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="_shedC" Type="GoudkoortV2.StaticObject" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="10" Y="6.125" />
         <Point X="9.625" Y="6.125" />
-        <Point X="9.625" Y="7.437" />
-        <Point X="10" Y="7.437" />
+        <Point X="9.625" Y="7.53" />
+        <Point X="10" Y="7.53" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -45,14 +45,14 @@
     <Position X="10" Y="7.25" Width="1.5" />
     <AssociationLine Name="_next" Type="GoudkoortV2.StaticObject" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="11.5" Y="7.623" />
-        <Point X="11.75" Y="7.623" />
-        <Point X="11.75" Y="8.277" />
-        <Point X="11.5" Y="8.277" />
+        <Point X="11.5" Y="7.808" />
+        <Point X="11.75" Y="7.808" />
+        <Point X="11.75" Y="8.787" />
+        <Point X="11.5" Y="8.787" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAACAAAA=</HashCode>
+      <HashCode>AgAIAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAACACAA=</HashCode>
       <FileName>Domain\StaticObject.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -209,7 +209,7 @@
   <Class Name="GoudkoortV2.RailSwitchGiver">
     <Position X="11" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\RailSwitchGiver.cs</FileName>
     </TypeIdentifier>
   </Class>

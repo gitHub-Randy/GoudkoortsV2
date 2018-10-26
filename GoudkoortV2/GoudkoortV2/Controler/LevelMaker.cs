@@ -84,23 +84,25 @@ namespace GoudkoortV2
                             Object[i, j] = new ArrangeRail();
                             break;
                         case 'A':
-                            Object[i, j] = new Shed();
+                            Object[i, j] = new Shed('A');
                             break;
                         case 'B':
-                            Object[i, j] = new Shed();
+                            Object[i, j] = new Shed('B');
                             break;
                         case 'C':
                             //MakePier();
-                            Object[i, j] = new Shed();
+                            Object[i, j] = new Shed('C');
                             break;
                         case 'S':
-                            
                             Object[i, j] = new RailSwitchTaker();
                             railSwitchTakers.Add((RailSwitchTaker)Object[i, j]);
                             break;
                         case 's':
                             Object[i, j] = new RailSwitchGiver();
                             railSwitchGivers.Add((RailSwitchGiver)Object[i, j]);
+                            break;
+                        case '.':
+                            Object[i, j] = new WhiteSpace();
                             break;
                         default:
                             break;
@@ -119,7 +121,7 @@ namespace GoudkoortV2
             {
                 for (int j = 0; j < lengthOfRows-1; j++)
                 {
-                    Console.Write(i+","+j+" ");
+                    Console.Write(Object[i,j].Symbol);
                 }
                 Console.WriteLine();
             }
@@ -162,10 +164,16 @@ namespace GoudkoortV2
             LinkTwoObjects(Object[2, 3], Object[2, 2]);
             LinkTwoObjects(Object[2, 2], Object[2, 1]);
             LinkTwoObjects(Object[2, 1], Object[2, 0]);
+
             LinkTwoObjects(Object[6, 0], Object[6, 1]);
             LinkTwoObjects(Object[6, 1], Object[6, 2]);
             LinkTwoObjects(Object[6, 2], Object[6, 3]);
             LinkTwoObjects(Object[6, 3], Object[5, 3]);
+
+            LinkTwoObjects(Object[6, 5], Object[7, 5]);
+            LinkTwoObjects(Object[7, 5], Object[7, 6]);
+            LinkTwoObjects(Object[6, 3], Object[5, 3]);
+
             LinkTwoObjects(Object[9, 0], Object[9, 1]);
             LinkTwoObjects(Object[9, 1], Object[9, 2]);
             LinkTwoObjects(Object[9, 2], Object[9, 3]);
@@ -179,10 +187,53 @@ namespace GoudkoortV2
             LinkTwoObjects(Object[7, 8], Object[6, 8]);
             LinkTwoObjects(Object[6, 8], Object[6, 9]);
             LinkTwoObjects(Object[6, 9], Object[5, 9]);
+
+
+            railSwitchTakers[0].UpperPrev = Object[4, 9];
+            railSwitchTakers[0].UnderPrev = Object[6, 9];
+            railSwitchTakers[0].Next = Object[5, 10];
+
             railSwitchTakers[1].UnderPrev = Object[6, 3];
             railSwitchTakers[1].UpperPrev = Object[4, 3];
-            railSwitchGivers[0].
+            railSwitchTakers[1].Next = Object[5, 4];
+            LinkTwoObjects(Object[5, 4], Object[5, 5]);
 
+
+            railSwitchTakers[2].UpperPrev = Object[7, 6];
+            railSwitchTakers[2].UnderPrev = Object[8, 6];
+            railSwitchTakers[2].Next = Object[8, 7];
+
+
+            railSwitchGivers[0].UnderNext = Object[6, 5];
+            railSwitchGivers[0].Next = Object[4, 5];
+
+            railSwitchGivers[1].UnderNext = Object[9, 8];
+            railSwitchGivers[1].Next = Object[7, 8];
+
+            LinkTwoObjects(Object[7, 8], Object[6, 8]);
+            LinkTwoObjects(Object[6, 8], Object[6, 9]);
+            LinkTwoObjects(Object[6, 9], Object[5, 9]);
+
+
+            LinkTwoObjects(Object[9, 8], Object[9, 9]);
+            LinkTwoObjects(Object[9, 9], Object[9, 10]);
+            LinkTwoObjects(Object[9, 10], Object[9, 11]);
+            LinkTwoObjects(Object[9, 11], Object[9, 12]);
+
+
+            LinkTwoObjects(Object[9, 12], Object[10, 12]);
+            LinkTwoObjects(Object[10, 12], Object[10, 11]);
+            LinkTwoObjects(Object[10, 11], Object[10, 10]);
+            LinkTwoObjects(Object[10, 10], Object[10, 9]);
+            LinkTwoObjects(Object[10, 9], Object[10, 8]);
+            LinkTwoObjects(Object[10, 8], Object[10, 7]);
+            LinkTwoObjects(Object[10, 7], Object[10, 6]);
+            LinkTwoObjects(Object[10, 6], Object[10, 5]);
+            LinkTwoObjects(Object[10, 5], Object[10, 4]);
+            LinkTwoObjects(Object[10, 4], Object[10, 3]);
+            LinkTwoObjects(Object[10, 3], Object[10, 2]);
+            LinkTwoObjects(Object[10, 2], Object[10, 1]);
+    
 
         }
 

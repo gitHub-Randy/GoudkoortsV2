@@ -7,6 +7,6 @@ namespace GoudkoortV2
 {
     public class RailWayView
     {
-        // View of the RailWay and therfore the MainGameView
+     
     }
 }

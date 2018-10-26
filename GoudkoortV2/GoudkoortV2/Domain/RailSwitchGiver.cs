@@ -9,7 +9,10 @@ namespace GoudkoortV2
     {
         private StaticObject underNext;
         
-
+        public RailSwitchGiver()
+        {
+            this.Symbol = 's';
+        }
 
         public StaticObject UnderNext
         {

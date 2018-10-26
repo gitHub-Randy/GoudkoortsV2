@@ -9,6 +9,10 @@ namespace GoudkoortV2
     {
         // can have a wagon and looks if it has a ship and a wagon and transfers load
 
+            public PierRail()
+        {
+            this.Symbol = 'K';
+        }
         public void GetLoadFromWagon()
         {
 
