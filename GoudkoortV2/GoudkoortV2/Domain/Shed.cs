@@ -8,7 +8,7 @@ namespace GoudkoortV2
     public class Shed : StaticObject
     {
         // Generates Wagon and puts it on the nearest Rail
-
+        
         public void GenerateWagon()
         {
 

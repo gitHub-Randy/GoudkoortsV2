@@ -12,16 +12,16 @@
       <Path>
         <Point X="11.5" Y="6.188" />
         <Point X="11.875" Y="6.188" />
-        <Point X="11.875" Y="7.312" />
-        <Point X="11.5" Y="7.312" />
+        <Point X="11.875" Y="7.343" />
+        <Point X="11.5" Y="7.343" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="_shedC" Type="GoudkoortV2.StaticObject" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="10" Y="6.125" />
         <Point X="9.625" Y="6.125" />
-        <Point X="9.625" Y="7.375" />
-        <Point X="10" Y="7.375" />
+        <Point X="9.625" Y="7.437" />
+        <Point X="10" Y="7.437" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -45,19 +45,19 @@
     <Position X="10" Y="7.25" Width="1.5" />
     <AssociationLine Name="_next" Type="GoudkoortV2.StaticObject" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="11.5" Y="7.5" />
-        <Point X="11.75" Y="7.5" />
-        <Point X="11.75" Y="7.938" />
-        <Point X="11.5" Y="7.938" />
+        <Point X="11.5" Y="7.623" />
+        <Point X="11.75" Y="7.623" />
+        <Point X="11.75" Y="8.277" />
+        <Point X="11.5" Y="8.277" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAACAAAA=</HashCode>
+      <HashCode>AgAAAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAACAAAA=</HashCode>
       <FileName>Domain\StaticObject.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="_next" />
-      <Property Name="_object" />
+      <Field Name="_next" />
+      <Field Name="_object" />
     </ShowAsAssociation>
   </Class>
   <Class Name="GoudkoortV2.Rail">
@@ -70,7 +70,7 @@
   <Class Name="GoudkoortV2.RailSwitch">
     <Position X="10" Y="11.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\RailSwitch.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -120,7 +120,7 @@
     <Position X="0.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
+      <FileName>Controler\Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="controller" />
@@ -130,7 +130,7 @@
     <Position X="4.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAQ=</HashCode>
-      <FileName>MainController.cs</FileName>
+      <FileName>Controler\MainController.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="_game" />
@@ -162,7 +162,7 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAABAIAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAgAAAAAI=</HashCode>
-      <FileName>GameController.cs</FileName>
+      <FileName>Controler\GameController.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="_railView" />
@@ -176,35 +176,49 @@
     <Position X="6.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>RailWayView.cs</FileName>
+      <FileName>View\RailWayView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudkoortV2.MenuView">
     <Position X="4.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MenuView.cs</FileName>
+      <FileName>View\MenuView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudkoortV2.ScoreView">
     <Position X="13.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ScoreView.cs</FileName>
+      <FileName>View\ScoreView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudkoortV2.ControlView">
     <Position X="10" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ControlView.cs</FileName>
+      <FileName>View\ControlView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudkoortV2.LevelMaker">
     <Position X="13.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
+      <HashCode>AAAAACABAAAAAAAAABAAAAgAQAAAAAQAAAAAABABAAA=</HashCode>
+      <FileName>Controler\LevelMaker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.RailSwitchTaker">
+    <Position X="8.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>LevelMaker.cs</FileName>
+      <FileName>RailSwitchTaker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.RailSwitchGiver">
+    <Position X="11" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RailSwitchGiver.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

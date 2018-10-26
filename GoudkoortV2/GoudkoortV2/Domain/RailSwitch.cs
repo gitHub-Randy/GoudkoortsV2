@@ -5,12 +5,10 @@ using System.Text;
 
 namespace GoudkoortV2
 {
-    public class RailSwitch : Rail
+    public abstract  class RailSwitch : Rail
     {
+        
         // Can have a wagon and can have diffrent states
-        public void ChangeState()
-        {
-
-        }
+       
     }
 }
