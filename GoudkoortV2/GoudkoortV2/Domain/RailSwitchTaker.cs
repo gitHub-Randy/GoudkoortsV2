@@ -12,7 +12,8 @@ namespace GoudkoortV2
 
         public RailSwitchTaker()
         {
-            this.Symbol = 'S';
+            this.StandardSymbol = 'S';
+            this.currentSymbol = StandardSymbol;
         }
         public StaticObject UpperPrev
         {

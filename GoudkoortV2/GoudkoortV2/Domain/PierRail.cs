@@ -11,7 +11,8 @@ namespace GoudkoortV2
 
             public PierRail()
         {
-            this.Symbol = 'K';
+            this.StandardSymbol = 'K';
+            this.currentSymbol = StandardSymbol;
         }
         public void GetLoadFromWagon()
         {

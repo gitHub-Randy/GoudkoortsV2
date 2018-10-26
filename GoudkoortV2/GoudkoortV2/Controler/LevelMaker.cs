@@ -33,6 +33,26 @@ namespace GoudkoortV2
             _object = new StaticObject[numberOfRows, lengthOfRows];
             ReadTextFile();
             MakeObjects();
+            Link();
+            this.ShedA = (Shed)Object[4, 0];
+            this.ShedB = (Shed)Object[6, 0];
+            this.ShedC = (Shed)Object[9, 0];
+        }
+
+        public Shed ShedA
+        {
+            get { return this.shedA; }
+            set { this.shedA = value; }
+        }
+        public Shed ShedB
+        {
+            get { return this.shedB; }
+            set { this.shedB = value; }
+        }
+        public Shed ShedC
+        {
+            get { return this.shedC; }
+            set { this.shedC = value; }
         }
 
         public void ReadTextFile()
@@ -85,13 +105,16 @@ namespace GoudkoortV2
                             break;
                         case 'A':
                             Object[i, j] = new Shed('A');
+                            
                             break;
                         case 'B':
                             Object[i, j] = new Shed('B');
+                           
                             break;
                         case 'C':
                             //MakePier();
                             Object[i, j] = new Shed('C');
+                            
                             break;
                         case 'S':
                             Object[i, j] = new RailSwitchTaker();
@@ -115,17 +138,17 @@ namespace GoudkoortV2
 
         }
 
-        public void PrintArr()
-        {
-            for (int i = 0; i < numberOfRows ; i++)
-            {
-                for (int j = 0; j < lengthOfRows-1; j++)
-                {
-                    Console.Write(Object[i,j].Symbol);
-                }
-                Console.WriteLine();
-            }
-        }
+        //public void PrintArr()
+        //{
+        //    for (int i = 0; i < numberOfRows ; i++)
+        //    {
+        //        for (int j = 0; j < lengthOfRows-1; j++)
+        //        {
+        //            Console.Write(Object[i,j].Symbol);
+        //        }
+        //        Console.WriteLine();
+        //    }
+        //}
 
 
         public void LinkTwoObjects(StaticObject current, StaticObject Next)

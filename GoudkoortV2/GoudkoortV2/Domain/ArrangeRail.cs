@@ -11,7 +11,8 @@ namespace GoudkoortV2
 
             public ArrangeRail()
         {
-            this.Symbol = 'O';
+            this.StandardSymbol = 'O';
+            this.currentSymbol = StandardSymbol;
         }
         public void LockWagon()
         {

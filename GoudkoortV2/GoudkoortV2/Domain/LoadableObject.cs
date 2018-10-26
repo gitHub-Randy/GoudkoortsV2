@@ -7,11 +7,19 @@ namespace GoudkoortV2
 {
     public abstract class LoadableObject
     {
+        char symbol;
         protected StaticObject _currentField { get; set; }
 
-        protected abstract void Move();
-      
+        public abstract void Move();
 
-        
+        public char Symbol
+        {
+            get { return this.symbol; }
+            set { this.symbol = value; }
+
+        }
+
+
+
     }
 }

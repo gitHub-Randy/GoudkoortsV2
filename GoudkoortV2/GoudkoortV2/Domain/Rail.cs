@@ -9,13 +9,27 @@ namespace GoudkoortV2
     {
         public Rail()
         {
-            this.Symbol = '-';
+            this.StandardSymbol = '-';
+            this.currentSymbol = StandardSymbol;
+        }
+
+        public override void DeleteObject(LoadableObject _object)
+        {
+            this.Object = null;
+        }
+
+        public override void PlaceObject(LoadableObject _object)
+        {
+            if(this.Object == null)
+            {
+                this.Object = _object;
+                this.SetSymbol();
+            }
+           
         }
         // is the base Rail and can obtain a Object 
-        protected  bool PlaceObject()
-        {
 
-            return false;
-        }
+
+       
     }
 }

@@ -9,12 +9,19 @@ namespace GoudkoortV2
     {
         protected StaticObject _next;
         protected LoadableObject _object;
-        protected char symbol;
+        protected char currentSymbol;
+        protected char standardSymbol;
 
-        public char Symbol
+        public char CurrentSymbol
         {
-            get { return this.symbol; }
-            set { this.symbol = value; }
+            get { return this.currentSymbol; }
+            set { this.currentSymbol = value; }
+        }
+
+        public char StandardSymbol
+        {
+            get { return this.standardSymbol; }
+            set { this.standardSymbol = value; }
         }
 
 
@@ -29,5 +36,21 @@ namespace GoudkoortV2
             get { return this._object; }
             set { this._object = value; }
         }
+
+        public abstract void PlaceObject(LoadableObject _object);
+        public abstract void DeleteObject(LoadableObject _object);
+
+        public void SetSymbol()
+        {
+            if (this.Object == null)
+            {
+                this.currentSymbol = this.standardSymbol;
+            }
+            else
+            {
+                this.currentSymbol = this.Object.Symbol;
+            }
+        }
     }
+       
 }

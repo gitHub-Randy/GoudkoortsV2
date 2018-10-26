@@ -8,7 +8,7 @@ namespace GoudkoortV2
     public class Ship : LoadableObject
     {
         //can move foreward and handle load
-        protected override void Move()
+        public override void Move()
         {
             throw new NotImplementedException();
         }

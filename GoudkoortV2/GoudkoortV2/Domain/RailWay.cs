@@ -7,11 +7,30 @@ namespace GoudkoortV2
 {
     public class RailWay
     {
-        StaticObject _shedA;
-        StaticObject _shedB;
-        StaticObject _shedC;
+        Shed _shedA;
+        Shed _shedB;
+        Shed _shedC;
+        List<LoadableObject> currentWagons;
         public RailWay()
         {
+             
+        }
+
+
+        public Shed ShedA
+        {
+            get { return this._shedA; }
+            set { this._shedA = value; }
+        }
+        public Shed ShedB
+        {
+            get { return this._shedB; }
+            set { this._shedB = value; }
+        }
+        public Shed ShedC
+        {
+            get { return this._shedC; }
+            set { this._shedC = value; }
         }
     }
 }

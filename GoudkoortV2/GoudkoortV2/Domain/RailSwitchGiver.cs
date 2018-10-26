@@ -11,7 +11,8 @@ namespace GoudkoortV2
         
         public RailSwitchGiver()
         {
-            this.Symbol = 's';
+            this.StandardSymbol = 's';
+            this.currentSymbol = StandardSymbol;
         }
 
         public StaticObject UnderNext
