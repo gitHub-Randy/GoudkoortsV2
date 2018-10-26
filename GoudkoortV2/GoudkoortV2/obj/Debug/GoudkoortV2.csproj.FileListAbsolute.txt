@@ -5,3 +5,10 @@ E:\repos\GoudkoortsV2\GoudkoortV2\GoudkoortV2\obj\Debug\GoudkoortV2.csprojAssemb
 E:\repos\GoudkoortsV2\GoudkoortV2\GoudkoortV2\obj\Debug\GoudkoortV2.csproj.CoreCompileInputs.cache
 E:\repos\GoudkoortsV2\GoudkoortV2\GoudkoortV2\obj\Debug\GoudkoortV2.exe
 E:\repos\GoudkoortsV2\GoudkoortV2\GoudkoortV2\obj\Debug\GoudkoortV2.pdb
+D:\eclipse-workspace\GoudkoortsV2\GoudkoortV2\GoudkoortV2\bin\Debug\GoudkoortV2.exe.config
+D:\eclipse-workspace\GoudkoortsV2\GoudkoortV2\GoudkoortV2\bin\Debug\GoudkoortV2.exe
+D:\eclipse-workspace\GoudkoortsV2\GoudkoortV2\GoudkoortV2\bin\Debug\GoudkoortV2.pdb
+D:\eclipse-workspace\GoudkoortsV2\GoudkoortV2\GoudkoortV2\obj\Debug\GoudkoortV2.csprojAssemblyReference.cache
+D:\eclipse-workspace\GoudkoortsV2\GoudkoortV2\GoudkoortV2\obj\Debug\GoudkoortV2.csproj.CoreCompileInputs.cache
+D:\eclipse-workspace\GoudkoortsV2\GoudkoortV2\GoudkoortV2\obj\Debug\GoudkoortV2.exe
+D:\eclipse-workspace\GoudkoortsV2\GoudkoortV2\GoudkoortV2\obj\Debug\GoudkoortV2.pdb

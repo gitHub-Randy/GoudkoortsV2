@@ -7,8 +7,14 @@ namespace GoudkoortV2
 {
     public abstract class LoadableObject
     {
-        char symbol;
-        protected StaticObject _currentField { get; set; }
+        public char symbol;
+        public Rail currentPlace;
+
+        public Rail CurrentPlace
+        {
+            get { return this.currentPlace; }
+            set { this.currentPlace = value; }
+        }
 
         public abstract void Move();
 

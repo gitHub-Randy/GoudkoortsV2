@@ -16,6 +16,8 @@ namespace GoudkoortV2
         public override void DeleteObject(LoadableObject _object)
         {
             this.Object = null;
+            this.currentSymbol = standardSymbol;
+            
         }
 
         public override void PlaceObject(LoadableObject _object)
@@ -24,7 +26,11 @@ namespace GoudkoortV2
             {
                 this.Object = _object;
                 this.SetSymbol();
+                this.Object.currentPlace.Object = null;
+                this.Object.CurrentPlace = this;
+                
             }
+
            
         }
         // is the base Rail and can obtain a Object 

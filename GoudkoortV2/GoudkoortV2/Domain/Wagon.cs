@@ -8,9 +8,7 @@ namespace GoudkoortV2
     public class Wagon : LoadableObject
 
     {
-      
 
-        Rail currentPlace;
 
         public Wagon(StaticObject current)
         {
@@ -19,11 +17,7 @@ namespace GoudkoortV2
         }
 
        
-        protected Rail CurrentPlace
-        {
-            get { return this.currentPlace; }
-            set { this.currentPlace = value; }
-        }
+
 
         //can move foreward and handle load
         protected  void GiveLoad()
@@ -34,6 +28,7 @@ namespace GoudkoortV2
         public override void Move()
         {
             this.currentPlace.Next.PlaceObject(this);
+            
             
         }
     }
