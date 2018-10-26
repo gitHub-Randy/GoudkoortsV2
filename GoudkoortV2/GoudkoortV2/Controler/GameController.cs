@@ -29,11 +29,13 @@ namespace GoudkoortV2
                 _domain.ShedA.GenerateWagon();
                 _domain.ShedB.GenerateWagon();
                 _domain.ShedC.GenerateWagon();
+                
                 _railView.printView();
                 Console.WriteLine("REPRINT");
-                Console.ReadKey();
+             
                 MoveAll();
-
+                Console.WriteLine(wagons.Count);
+                Console.ReadKey();
             }
 
         }
@@ -60,6 +62,7 @@ namespace GoudkoortV2
                 {
                     n.Move();
                 }
+                
             }
             
         }

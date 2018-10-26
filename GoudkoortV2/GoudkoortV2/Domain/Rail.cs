@@ -26,7 +26,6 @@ namespace GoudkoortV2
             {
                 this.Object = _object;
                 this.SetSymbol();
-                this.Object.currentPlace.Object = null;
                 this.Object.CurrentPlace = this;
                 
             }
