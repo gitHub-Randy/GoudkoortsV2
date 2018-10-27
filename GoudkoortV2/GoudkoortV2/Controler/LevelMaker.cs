@@ -11,10 +11,10 @@ namespace GoudkoortV2
         List<RailSwitchGiver> railSwitchGivers = new List<RailSwitchGiver>();
         List<ArrangeRail> arrangeRails = new List<ArrangeRail>();
         PierRail pier = new PierRail();
-        Shed shedA;
-        Shed shedB;
-        Shed shedC;
-
+        WagonShed shedA;
+        WagonShed shedB;
+        WagonShed shedC;
+        Ocean ocean;
 
 
         String[] lines;
@@ -34,29 +34,36 @@ namespace GoudkoortV2
             ReadTextFile();
             MakeObjects();
             Link();
-            this.ShedA = (Shed)Object[4, 0];
-            this.ShedB = (Shed)Object[6, 0];
-            this.ShedC = (Shed)Object[9, 0];
+            this.ShedA = (WagonShed)Object[4, 0];
+            this.ShedB = (WagonShed)Object[6, 0];
+            this.ShedC = (WagonShed)Object[9, 0];
+            this.ocean = (Ocean)Object[1, 12];
         }
 
         public List<RailSwitchGiver> getSwitchGivers { get { return this.railSwitchGivers; } }
         public List<RailSwitchTaker> getSwitchTakers { get { return this.railSwitchTakers; } }
 
 
-        public Shed ShedA
+        public WagonShed ShedA
         {
             get { return this.shedA; }
             set { this.shedA = value; }
         }
-        public Shed ShedB
+        public WagonShed ShedB
         {
             get { return this.shedB; }
             set { this.shedB = value; }
         }
-        public Shed ShedC
+        public WagonShed ShedC
         {
             get { return this.shedC; }
             set { this.shedC = value; }
+        }
+
+        public Ocean Ocean
+        {
+            get { return this.ocean; }
+            set { this.ocean = value; }
         }
 
         public void ReadTextFile()
@@ -95,10 +102,7 @@ namespace GoudkoortV2
                             //MakeWater();
                             Object[i, j] = new Rail();
                             break;
-                        case '+':
-                            //MakeShip();
-                            Object[i, j] = new Rail(); // ship erop zetten
-                            break;
+                       
                         case 'K':
                             //MakeEmptySpace();
                             Object[i, j] = new PierRail();
@@ -108,17 +112,20 @@ namespace GoudkoortV2
                             Object[i, j] = new ArrangeRail();
                             break;
                         case 'A':
-                            Object[i, j] = new Shed('A');
+                            Object[i, j] = new WagonShed('A');
                             
                             break;
                         case 'B':
-                            Object[i, j] = new Shed('B');
+                            Object[i, j] = new WagonShed('B');
                            
                             break;
                         case 'C':
                             //MakePier();
-                            Object[i, j] = new Shed('C');
-                            
+                            Object[i, j] = new WagonShed('C');
+                            break;
+                        case '=':
+                            //MakePier();
+                            Object[i, j] = new Ocean();
                             break;
                         case 'S':
                             Object[i, j] = new RailSwitchTaker();
@@ -130,6 +137,9 @@ namespace GoudkoortV2
                             break;
                         case '.':
                             Object[i, j] = new WhiteSpace();
+                            break;
+                        case '+':
+                            Object[i, j] = new WaterPier();
                             break;
                         default:
                             break;
@@ -163,6 +173,36 @@ namespace GoudkoortV2
 
         public void Link()
         {
+
+
+            LinkTwoObjects(Object[1, 12], Object[1, 11]);
+            LinkTwoObjects(Object[1, 11], Object[1, 10]);
+            LinkTwoObjects(Object[1, 10], Object[1, 9]);
+            LinkTwoObjects(Object[1, 9], Object[1, 8]);
+            LinkTwoObjects(Object[1, 8], Object[1, 7]);
+            LinkTwoObjects(Object[1, 7], Object[1, 6]);
+            LinkTwoObjects(Object[1, 6], Object[1, 5]);
+            LinkTwoObjects(Object[1, 5], Object[1, 4]);
+            LinkTwoObjects(Object[1, 4], Object[1, 3]);
+            LinkTwoObjects(Object[1, 3], Object[1, 2]);
+            LinkTwoObjects(Object[1, 2], Object[1, 1]);
+            LinkTwoObjects(Object[1, 1], Object[1, 0]);
+
+            WaterPier waterpier = (WaterPier)Object[1, 9];
+            waterpier.Pier = (PierRail)Object[2, 9];
+
+            PierRail pier = (PierRail)Object[2, 9];
+            pier.PierWater = waterpier;
+            pier.Ocean = (Ocean)Object[1, 12];
+
+            
+
+            Ocean shipShed = (Ocean)Object[1, 12];
+         
+
+            waterpier.Ocean = shipShed;
+
+
             LinkTwoObjects(Object[4, 0], Object[4, 1]);
             LinkTwoObjects(Object[4, 1], Object[4, 2]);
             LinkTwoObjects(Object[4, 2], Object[4, 3]);

@@ -8,9 +8,9 @@ namespace GoudkoortV2
     public abstract class LoadableObject
     {
         public char symbol;
-        public Rail currentPlace;
+        public StaticObject currentPlace;
         public bool canMove;
-        public Rail CurrentPlace
+        public StaticObject CurrentPlace
         {
             get { return this.currentPlace; }
             set { this.currentPlace = value; }

@@ -7,27 +7,32 @@ namespace GoudkoortV2
 {
     public class RailWay
     {
-        Shed _shedA;
-        Shed _shedB;
-        Shed _shedC;
+        WagonShed _shedA;
+        WagonShed _shedB;
+        WagonShed _shedC;
+        Ocean _ocean;
         List<LoadableObject> currentWagons;
         public RailWay()
         {
              
         }
 
-
-        public Shed ShedA
+        public Ocean Ocean
+        {
+            get { return this._ocean; }
+            set { this._ocean = value; }
+        }
+        public WagonShed ShedA
         {
             get { return this._shedA; }
             set { this._shedA = value; }
         }
-        public Shed ShedB
+        public WagonShed ShedB
         {
             get { return this._shedB; }
             set { this._shedB = value; }
         }
-        public Shed ShedC
+        public WagonShed ShedC
         {
             get { return this._shedC; }
             set { this._shedC = value; }

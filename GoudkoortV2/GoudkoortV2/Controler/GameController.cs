@@ -31,29 +31,33 @@ namespace GoudkoortV2
             keyInputThread = new Thread(_inputController.KeyInputEvent);
             i = 1;
             timerThread = new Thread(InitializeTimer);
+            _domain.Ocean = _levelMaker.Ocean;
+            _domain.Ocean.GenerateShip();
             _railView.printView();
             _domain.ShedA = _levelMaker.ShedA;
             _domain.ShedB = _levelMaker.ShedB;
             _domain.ShedC = _levelMaker.ShedC;
+           
             wagons = new List<LoadableObject>();
             StartInputThread();
-            
-      
+       
+
             startTimerThread();
 
-            //while (true)
-            //{
-            //    _domain.ShedA.GenerateWagon();
-            //    _domain.ShedB.GenerateWagon();
-            //    _domain.ShedC.GenerateWagon();
+            while (true)
+            {
+                _domain.ShedA.GenerateWagon();
+                //_domain.ShedB.GenerateWagon();
+                //_domain.ShedC.GenerateWagon();
 
-            //    _railView.printView();
-            //    Console.WriteLine("REPRINT");
+                
+                _railView.printView();
+                Console.WriteLine("REPRINT");
 
-            //    MoveAll();
-            //    Console.WriteLine(wagons.Count);
-            //    Console.ReadKey();
-            //}
+                MoveAll();
+                Console.WriteLine(wagons.Count);
+                Console.ReadKey();
+            }
 
             Console.ReadKey();
         }
@@ -97,9 +101,9 @@ namespace GoudkoortV2
                 //Thread.Sleep(3000);
 
                 i = 1;
-               
-                //_domain.ShedA.GenerateWagon();
-                //_domain.ShedB.GenerateWagon();
+
+                _domain.ShedA.GenerateWagon();
+                _domain.ShedB.GenerateWagon();
                 _domain.ShedC.GenerateWagon();
 
                 _railView.printView();
@@ -117,20 +121,24 @@ namespace GoudkoortV2
 
         public void MoveAll()
         {
-            if (_levelMaker.Object[4, 1].Object != null)
+            if (_domain.ShedA.Next.Object != null)
             {
-                wagons.Add(_levelMaker.Object[4, 1].Object);
+                wagons.Add(_domain.ShedA.Next.Object);
             }
-            if (_levelMaker.Object[6, 1].Object != null)
+            if (_domain.ShedB.Next.Object != null)
             {
-                wagons.Add(_levelMaker.Object[6, 1].Object);
+                wagons.Add(_domain.ShedB.Next.Object);
             }
-            if (_levelMaker.Object[9, 1].Object != null)
+            if (_domain.ShedC.Next.Object != null)
             {
-                wagons.Add(_levelMaker.Object[9, 1].Object);
+                wagons.Add(_domain.ShedC.Next.Object);
             }
 
-            if(wagons.Count != 0)
+            if (_domain.Ocean.Next.Object != null)
+                {
+                    wagons.Add(_domain.Ocean.Next.Object);
+                }
+            if (wagons.Count != 0)
             {
                 foreach (LoadableObject n in wagons)
                 {

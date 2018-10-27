@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="GoudkoortV2.RailWay">
+  <Class Name="GoudkoortV2.RailWay" Collapsed="true">
     <Position X="10" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAkAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAEAgAAAAA=</HashCode>
+      <HashCode>AAkAAAAAAAAAAAAAAAQAAAAAAAAIAAAAAAAMAgAAAAA=</HashCode>
       <FileName>Domain\RailWay.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -15,7 +15,7 @@
   <Class Name="GoudkoortV2.Shed">
     <Position X="8" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAAAAAAIAAAAAAgAAAAAAAAABAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\Shed.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -58,7 +58,7 @@
   <Class Name="GoudkoortV2.ArrangeRail">
     <Position X="12.5" Y="11.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\ArrangeRail.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -69,17 +69,17 @@
       <FileName>Domain\WhiteSpace.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoudkoortV2.LoadableObject">
+  <Class Name="GoudkoortV2.LoadableObject" Collapsed="true">
     <Position X="4" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAAAIAAAAAAAAAAAAIAAAACAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAIACAAAIAgAAAAAAAAAAIAAAACAAAAAAAAAAAACAA=</HashCode>
       <FileName>Domain\LoadableObject.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudkoortV2.PierRail">
-    <Position X="7.75" Y="11.25" Width="1.5" />
+    <Position X="16.25" Y="13.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <HashCode>AAAIAAAAAAAAAAAAAAQAAAACIgAAAAAAAAAIAAAAACA=</HashCode>
       <FileName>Domain\PierRail.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -93,7 +93,7 @@
   <Class Name="GoudkoortV2.Ship">
     <Position X="5.5" Y="10" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAAAgAAAAICAAAAAEAAAAAAAAAAAAAAAAAAAAAABgAA=</HashCode>
       <FileName>Domain\Ship.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -118,7 +118,7 @@
       <Field Name="_menu" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="GoudkoortV2.GameController">
+  <Class Name="GoudkoortV2.GameController" Collapsed="true">
     <Position X="10" Y="3.5" Width="1.5" />
     <AssociationLine Name="_railView" Type="GoudkoortV2.RailWayView" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
@@ -195,11 +195,44 @@
       <FileName>Domain\RailSwitchGiver.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoudkoortV2.LevelMaker">
+  <Class Name="GoudkoortV2.LevelMaker" Collapsed="true">
     <Position X="13.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAABhAJAAEAgAQBKIAAQAAAAEQBCBhAA=</HashCode>
+      <HashCode>AAEAAAAAAAAAAABhAJAAEAgAQBKIAAQAAAAMQBCBjAA=</HashCode>
       <FileName>Controler\LevelMaker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.WaterPier">
+    <Position X="15.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAACAAAGCYAAAAAAgCAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>WaterPier.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Ocean" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GoudkoortV2.WagonShed">
+    <Position X="3.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAIAAAAAAgAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>WagonShed.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudkoortV2.Ocean">
+    <Position X="6.5" Y="14.5" Width="1.5" />
+    <InheritanceLine Type="GoudkoortV2.Shed" FixedToPoint="true">
+      <Path>
+        <Point X="8.75" Y="10.247" />
+        <Point X="8.75" Y="10.622" />
+        <Point X="8.375" Y="10.622" />
+        <Point X="8.375" Y="15.269" />
+        <Point X="8" Y="15.269" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAgAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Ocean.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

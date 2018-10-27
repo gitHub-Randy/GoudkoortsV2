@@ -46,6 +46,8 @@
     <Compile Include="Controler\InputController.cs" />
     <Compile Include="Domain\RailSwitchGiver.cs" />
     <Compile Include="Domain\RailSwitchTaker.cs" />
+    <Compile Include="WaterPier.cs" />
+    <Compile Include="Ocean.cs" />
     <Compile Include="View\ControlView.cs" />
     <Compile Include="Domain\ArrangeRail.cs" />
     <Compile Include="Domain\LoadableObject.cs" />
@@ -68,6 +70,7 @@
     <Compile Include="Domain\WhiteSpace.cs" />
     <Compile Include="View\RailWayView.cs" />
     <Compile Include="View\ScoreView.cs" />
+    <Compile Include="WagonShed.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
