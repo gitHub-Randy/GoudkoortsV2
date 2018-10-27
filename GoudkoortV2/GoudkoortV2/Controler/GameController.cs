@@ -29,7 +29,7 @@ namespace GoudkoortV2
             _controlView = new ControlView();
             _inputController = new InputController(this);
             keyInputThread = new Thread(_inputController.KeyInputEvent);
-            i = 5;
+            i = 1;
             timerThread = new Thread(InitializeTimer);
             _railView.printView();
             _domain.ShedA = _levelMaker.ShedA;
@@ -94,12 +94,12 @@ namespace GoudkoortV2
                
                 keyInputThread.Suspend();
                 Console.WriteLine("Alles wordt nu bewogen");
-                Thread.Sleep(3000);
+                //Thread.Sleep(3000);
 
-                i = 5;
+                i = 1;
                
-                _domain.ShedA.GenerateWagon();
-                _domain.ShedB.GenerateWagon();
+                //_domain.ShedA.GenerateWagon();
+                //_domain.ShedB.GenerateWagon();
                 _domain.ShedC.GenerateWagon();
 
                 _railView.printView();

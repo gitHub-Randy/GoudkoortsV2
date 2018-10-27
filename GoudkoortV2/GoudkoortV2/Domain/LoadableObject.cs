@@ -9,7 +9,7 @@ namespace GoudkoortV2
     {
         public char symbol;
         public Rail currentPlace;
-
+        public bool canMove;
         public Rail CurrentPlace
         {
             get { return this.currentPlace; }
@@ -23,6 +23,12 @@ namespace GoudkoortV2
             get { return this.symbol; }
             set { this.symbol = value; }
 
+        }
+
+        public bool CanMove
+        {
+            get { return this.canMove; }
+            set { this.canMove = value; }
         }
 
 

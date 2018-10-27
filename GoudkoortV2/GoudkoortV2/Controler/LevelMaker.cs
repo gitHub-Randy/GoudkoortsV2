@@ -199,6 +199,7 @@ namespace GoudkoortV2
 
             LinkTwoObjects(Object[6, 5], Object[7, 5]);
             LinkTwoObjects(Object[7, 5], Object[7, 6]);
+            LinkTwoObjects(Object[7, 6], Object[8, 6]);
             LinkTwoObjects(Object[6, 3], Object[5, 3]);
 
             LinkTwoObjects(Object[9, 0], Object[9, 1]);
@@ -245,11 +246,11 @@ namespace GoudkoortV2
             LinkTwoObjects(Object[9, 8], Object[9, 9]);
             LinkTwoObjects(Object[9, 9], Object[9, 10]);
             LinkTwoObjects(Object[9, 10], Object[9, 11]);
-            LinkTwoObjects(Object[9, 11], Object[9, 12]);
+            LinkTwoObjects(Object[9, 11], Object[10, 11]);
 
 
             LinkTwoObjects(Object[9, 12], Object[10, 12]);
-            LinkTwoObjects(Object[10, 12], Object[10, 11]);
+
             LinkTwoObjects(Object[10, 11], Object[10, 10]);
             LinkTwoObjects(Object[10, 10], Object[10, 9]);
             LinkTwoObjects(Object[10, 9], Object[10, 8]);

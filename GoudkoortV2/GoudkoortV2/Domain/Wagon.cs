@@ -14,6 +14,7 @@ namespace GoudkoortV2
         {
             this.Symbol = 'W';
             this.CurrentPlace = (Rail)current;
+            this.CanMove = true;
         }
 
        
@@ -27,14 +28,18 @@ namespace GoudkoortV2
 
         public override void Move()
         {
-            if (currentPlace.Next != null)
+            if (this.CanMove)
             {
-                StaticObject prev = this.CurrentPlace;
-                this.currentPlace.Next.PlaceObject(this);
-                this.currentPlace.SetSymbol();
-                prev.Object = null;
-                prev.SetSymbol();
+                if (currentPlace.Next != null)
+                {
+                    StaticObject prev = this.CurrentPlace;
+                    this.currentPlace.Next.PlaceObject(this);
+                    this.currentPlace.SetSymbol();
+                    prev.Object = null;
+                    prev.SetSymbol();
+                }
             }
+            
          
             
             

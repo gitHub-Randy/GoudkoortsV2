@@ -29,8 +29,10 @@ namespace GoudkoortV2
         public void GenerateWagon()
         {
             r = new Random();
-            int x =  r.Next(0,100);
-            if (x < 25)
+            int x = r.Next(0, 100);
+         
+           
+            if (x < 50)
             {
                 this.Next.PlaceObject(new Wagon(this.Next));
                 this.Next.SetSymbol();
