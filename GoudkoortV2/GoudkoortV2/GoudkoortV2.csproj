@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controler\InputController.cs" />
     <Compile Include="Domain\RailSwitchGiver.cs" />
     <Compile Include="Domain\RailSwitchTaker.cs" />
     <Compile Include="View\ControlView.cs" />

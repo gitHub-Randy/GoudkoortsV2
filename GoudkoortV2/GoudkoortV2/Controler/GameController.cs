@@ -1,5 +1,8 @@
-﻿using System;
+﻿using GoudkoortV2.Controler;
+using System;
 using System.Collections.Generic;
+using System.Threading;
+using System.Timers;
 
 namespace GoudkoortV2
 {
@@ -11,6 +14,11 @@ namespace GoudkoortV2
         private RailWay _domain;
         private LevelMaker _levelMaker;
         private List<LoadableObject> wagons;
+        private Thread keyInputThread;
+        private Thread timerThread;
+        private InputController _inputController;
+        private System.Timers.Timer aTimer;
+        private int i;
 
         public GameController()
         {
@@ -19,11 +27,16 @@ namespace GoudkoortV2
             _railView = new RailWayView(_levelMaker.Object);
             _scoreView = new ScoreView();
             _controlView = new ControlView();
+            _inputController = new InputController(this);
+            keyInputThread = new Thread(_inputController.KeyInputEvent);
+            i = 5;
+            timerThread = new Thread(InitializeTimer);
             _railView.printView();
             _domain.ShedA = _levelMaker.ShedA;
             _domain.ShedB = _levelMaker.ShedB;
             _domain.ShedC = _levelMaker.ShedC;
             wagons = new List<LoadableObject>();
+            startTimerThread();
             while (true)
             {
                 _domain.ShedA.GenerateWagon();
@@ -36,6 +49,34 @@ namespace GoudkoortV2
                 MoveAll();
                 Console.WriteLine(wagons.Count);
                 Console.ReadKey();
+            }
+
+        }
+
+        public LevelMaker getLevelMaker { get { return this._levelMaker; } }
+
+        public void startTimerThread()
+        {
+            timerThread.Start();
+        }
+
+        public void InitializeTimer()
+        {
+            aTimer = new System.Timers.Timer(100);
+            aTimer.Elapsed += OnTimedEvent;
+            aTimer.Start();
+        }
+
+        private void OnTimedEvent(Object source, ElapsedEventArgs e)
+        {
+            Console.WriteLine(i);
+            i--;
+
+            if (i == 0)
+            {
+                aTimer.Stop();
+                i = 5;
+                
             }
 
         }

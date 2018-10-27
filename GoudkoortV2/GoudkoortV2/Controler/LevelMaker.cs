@@ -39,6 +39,10 @@ namespace GoudkoortV2
             this.ShedC = (Shed)Object[9, 0];
         }
 
+        public List<RailSwitchGiver> getSwitchGivers { get { return this.railSwitchGivers; } }
+        public List<RailSwitchTaker> getSwitchTakers { get { return this.railSwitchTakers; } }
+
+
         public Shed ShedA
         {
             get { return this.shedA; }
