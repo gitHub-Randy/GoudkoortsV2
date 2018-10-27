@@ -51,7 +51,7 @@
   <Class Name="GoudkoortV2.RailSwitch">
     <Position X="10" Y="11.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\RailSwitch.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -72,7 +72,7 @@
   <Class Name="GoudkoortV2.LoadableObject">
     <Position X="4" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIEAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAIAAAAAIAAAAAAAAAAAAIAAAACAAAAAAAAAAAACAA=</HashCode>
       <FileName>Domain\LoadableObject.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -86,7 +86,7 @@
   <Class Name="GoudkoortV2.Wagon">
     <Position X="2" Y="10" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIBAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\Wagon.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -142,7 +142,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAABAIAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAgQAAAgI=</HashCode>
+      <HashCode>BAgJAIAAAAAAAAAAAAgAAAAAAEAoAAAEIACAgQAAAhI=</HashCode>
       <FileName>Controler\GameController.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -184,21 +184,21 @@
   <Class Name="GoudkoortV2.RailSwitchTaker">
     <Position X="8.75" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAAAgAAAACAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAACAAAAIgAAAACAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\RailSwitchTaker.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudkoortV2.RailSwitchGiver">
     <Position X="11" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAgAAAAAAAAAIAAAAAAAAAAIAAAACAAAAAAAAAAIAA=</HashCode>
       <FileName>Domain\RailSwitchGiver.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudkoortV2.LevelMaker">
     <Position X="13.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAABhAJAAEAgAQBKIAAQAAAAEQBCBAAA=</HashCode>
+      <HashCode>AAEAAAAAAAAAAABhAJAAEAgAQBKIAAQAAAAEQBCBhAA=</HashCode>
       <FileName>Controler\LevelMaker.cs</FileName>
     </TypeIdentifier>
   </Class>

@@ -36,24 +36,39 @@ namespace GoudkoortV2
             _domain.ShedB = _levelMaker.ShedB;
             _domain.ShedC = _levelMaker.ShedC;
             wagons = new List<LoadableObject>();
-            startTimerThread();
-            while (true)
-            {
-                _domain.ShedA.GenerateWagon();
-                _domain.ShedB.GenerateWagon();
-                _domain.ShedC.GenerateWagon();
-                
-                _railView.printView();
-                Console.WriteLine("REPRINT");
-             
-                MoveAll();
-                Console.WriteLine(wagons.Count);
-                Console.ReadKey();
-            }
+            StartInputThread();
+            
+      
+            //startTimerThread();
 
+            //while (true)
+            //{
+            //    _domain.ShedA.GenerateWagon();
+            //    _domain.ShedB.GenerateWagon();
+            //    _domain.ShedC.GenerateWagon();
+
+            //    _railView.printView();
+            //    Console.WriteLine("REPRINT");
+
+            //    MoveAll();
+            //    Console.WriteLine(wagons.Count);
+            //    Console.ReadKey();
+            //}
+
+            Console.ReadKey();
         }
 
         public LevelMaker getLevelMaker { get { return this._levelMaker; } }
+
+        public RailWayView getRailView { get { return this._railView; } }
+
+
+        public void StartInputThread()
+        {
+            keyInputThread.Start();
+        
+        }
+
 
         public void startTimerThread()
         {

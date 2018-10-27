@@ -12,7 +12,7 @@ namespace GoudkoortV2
 
         public RailSwitchTaker()
         {
-            this.StandardSymbol = 'S';
+            this.StandardSymbol = '/';
             this.currentSymbol = StandardSymbol;
         }
         public StaticObject UpperPrev
@@ -25,6 +25,23 @@ namespace GoudkoortV2
         {
             get { return underPrev; }
             set { underPrev = value; }
+        }
+
+        public override void Switch()
+        {
+            if(this.CurrentSymbol == '/')
+            {
+                this.UpperPrev.Next = this;
+                this.CurrentSymbol = '\\';
+                this.UnderPrev.Next = null;
+            }
+            else
+            {
+                this.UnderPrev.Next = this;
+                this.CurrentSymbol = '/';
+                this.UpperPrev.Next = null;
+            }
+            
         }
     }
 }

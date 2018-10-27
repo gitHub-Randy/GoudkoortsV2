@@ -8,10 +8,11 @@ namespace GoudkoortV2
     public class RailSwitchGiver :RailSwitch
     {
         private StaticObject underNext;
+        private StaticObject upperNext;
         
         public RailSwitchGiver()
         {
-            this.StandardSymbol = 's';
+            this.StandardSymbol = '\\';
             this.currentSymbol = StandardSymbol;
         }
 
@@ -21,6 +22,25 @@ namespace GoudkoortV2
             set { underNext = value; }
         }
 
-      
+        public StaticObject UpperNext
+        {
+            get { return this.upperNext; }
+            set { upperNext = value; }
+        }
+
+        public override void Switch()
+        {
+            if (this.CurrentSymbol == '/')
+            {
+                this.Next = this.UnderNext;
+                this.currentSymbol = '\\';
+            }
+            else
+            {
+                this.Next = this.UpperNext;
+                this.currentSymbol = '/';
+            }
+
+        }
     }
 }
