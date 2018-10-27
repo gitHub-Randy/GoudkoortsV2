@@ -39,7 +39,7 @@ namespace GoudkoortV2
             StartInputThread();
             
       
-            //startTimerThread();
+            startTimerThread();
 
             //while (true)
             //{
@@ -77,7 +77,7 @@ namespace GoudkoortV2
 
         public void InitializeTimer()
         {
-            aTimer = new System.Timers.Timer(100);
+            aTimer = new System.Timers.Timer(1000);
             aTimer.Elapsed += OnTimedEvent;
             aTimer.Start();
         }
@@ -86,12 +86,30 @@ namespace GoudkoortV2
         {
             Console.WriteLine(i);
             i--;
+            
 
             if (i == 0)
             {
                 aTimer.Stop();
+               
+                keyInputThread.Suspend();
+                Console.WriteLine("Alles wordt nu bewogen");
+                Thread.Sleep(3000);
+
                 i = 5;
+               
+                _domain.ShedA.GenerateWagon();
+                _domain.ShedB.GenerateWagon();
+                _domain.ShedC.GenerateWagon();
+
+                _railView.printView();
+               
                 
+                MoveAll();
+                InitializeTimer();
+                keyInputThread.Resume();
+                
+
             }
 
         }
