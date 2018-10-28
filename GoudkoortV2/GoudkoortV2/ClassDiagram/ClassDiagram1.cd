@@ -88,7 +88,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAAAAgAAAQIAAACIgAAAAAAAAAIAAAAACA=</HashCode>
+      <HashCode>AAAIAAAAAAAAAggAAAQAAAACIgAAAAAAAAAIAAAAACA=</HashCode>
       <FileName>Domain\PierRail.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -210,7 +210,7 @@
   <Class Name="GoudkoortV2.LevelMaker" Collapsed="true">
     <Position X="13.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAEAAAAAAAAAAAhhAJAIEAgEQBKIBAQAAAAMQJCBjAA=</HashCode>
+      <HashCode>gAEAAAAAAAAAAghhAJAAEAgEQBKIBAQAAAAMQJCBjAA=</HashCode>
       <FileName>Controler\LevelMaker.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -250,7 +250,7 @@
   <Class Name="GoudkoortV2.Score">
     <Position X="24" Y="10.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Score.cs</FileName>
     </TypeIdentifier>
   </Class>

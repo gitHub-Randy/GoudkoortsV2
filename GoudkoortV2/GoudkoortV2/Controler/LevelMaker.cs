@@ -10,7 +10,7 @@ namespace GoudkoortV2
         List<RailSwitchTaker> railSwitchTakers = new List<RailSwitchTaker>();
         List<RailSwitchGiver> railSwitchGivers = new List<RailSwitchGiver>();
         List<ArrangeRail> arrangeRails = new List<ArrangeRail>();
-        PierRail pier = new PierRail();
+        PierRail pier;
         WagonShed shedA;
         WagonShed shedB;
         WagonShed shedC;
@@ -42,7 +42,7 @@ namespace GoudkoortV2
             this.wagonEnd = (EndRail)Object[2, 0];
             this.shipEnd = (EndRail)Object[1, 0];
             this.ocean = (Ocean)Object[1, 12];
-            _score = new Score();
+          
         }
 
         public List<RailSwitchGiver> getSwitchGivers { get { return this.railSwitchGivers; } }
@@ -124,7 +124,7 @@ namespace GoudkoortV2
                        
                         case 'K':
                             //MakeEmptySpace();
-                            Object[i, j] = new PierRail();
+                            Object[i, j] = new PierRail(this.Score);
                             break;
                         case 'R':
                             //MakeRail();
@@ -210,16 +210,23 @@ namespace GoudkoortV2
             LinkTwoObjects(Object[1, 2], Object[1, 1]);
             LinkTwoObjects(Object[1, 1], Object[1, 0]);
 
+            this.Score = new Score();
+            PierRail pier = new PierRail(this.Score);
+            pier.Ocean = (Ocean)Object[1, 12];
+            Object[2, 9] = pier;
+
             WaterPier waterpier = (WaterPier)Object[1, 9];
             waterpier.Pier = (PierRail)Object[2, 9];
-
-            PierRail pier = (PierRail)Object[2, 9];
+           
             pier.PierWater = waterpier;
-            pier.Ocean = (Ocean)Object[1, 12];
-            pier.Score = _score;
 
-            
-            
+
+            pier.Next = Object[2, 8];
+
+            Object[2, 8].Next = Object[2, 7];
+           
+
+           
             Ocean shipShed = (Ocean)Object[1, 12];
          
 
@@ -245,8 +252,8 @@ namespace GoudkoortV2
             LinkTwoObjects(Object[3, 11], Object[2, 11]);
             LinkTwoObjects(Object[2, 11], Object[2, 10]);
             LinkTwoObjects(Object[2, 10], Object[2, 9]);
-            LinkTwoObjects(Object[2, 9], Object[2, 8]);
-            LinkTwoObjects(Object[2, 8], Object[2, 7]);
+           
+            
             LinkTwoObjects(Object[2, 7], Object[2, 6]);
             LinkTwoObjects(Object[2, 6], Object[2, 5]);
             LinkTwoObjects(Object[2, 5], Object[2, 4]);

@@ -13,7 +13,7 @@ namespace GoudkoortV2
         public Wagon(StaticObject current)
         {
             this.Symbol = 'W';
-            this.CurrentPlace = (Rail)current;
+            this.CurrentPlace = (StaticObject)current;
             this.CanMove = true;
         }
 

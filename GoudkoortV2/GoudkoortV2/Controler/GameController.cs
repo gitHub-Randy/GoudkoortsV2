@@ -23,13 +23,13 @@ namespace GoudkoortV2
         public GameController()
         {
             _levelMaker = new LevelMaker();
-            _domain = new RailWay();
+            _domain = new RailWay(_levelMaker.Score);
             _railView = new RailWayView(_levelMaker.Object);
             _scoreView = new ScoreView();
             _controlView = new ControlView();
             _inputController = new InputController(this);
             keyInputThread = new Thread(_inputController.KeyInputEvent);
-            i = 1;
+            i = 5;
             timerThread = new Thread(InitializeTimer);
             _domain.Ocean = _levelMaker.Ocean;
            
@@ -40,10 +40,6 @@ namespace GoudkoortV2
             _domain.ShipEnd = _levelMaker.ShipEnd;
             _domain.WagonEnd = _levelMaker.WagonEnd;
             _domain.Ocean.GenerateShip();
-            _domain.ShedA.GenerateWagon();
-            _domain.Score = _levelMaker.Score;
-            //_domain.ShedB.GenerateWagon();
-            //_domain.ShedC.GenerateWagon();
             wagons = new List<LoadableObject>();
             StartInputThread();
        
@@ -51,21 +47,6 @@ namespace GoudkoortV2
             startTimerThread();
             _railView.printView();
 
-            while (true)
-            {
-                //_domain.ShedA.GenerateWagon();
-                //_domain.ShedB.GenerateWagon();
-                //_domain.ShedC.GenerateWagon();
-
-                
-                _railView.printView();
-                this._scoreView.PrintScore(GetScore());
-                Console.WriteLine("REPRINT");
-
-                MoveAll();
-                Console.WriteLine(wagons.Count);
-                Console.ReadKey();
-            }
 
             Console.ReadKey();
         }
@@ -106,16 +87,16 @@ namespace GoudkoortV2
                
                 keyInputThread.Suspend();
                 Console.WriteLine("Alles wordt nu bewogen");
-                //Thread.Sleep(3000);
+                Thread.Sleep(3000);
 
-                i = 1;
+                i = 5;
 
-                //_domain.ShedA.GenerateWagon();
-                //_domain.ShedB.GenerateWagon();
-                //_domain.ShedC.GenerateWagon();
+                _domain.ShedA.GenerateWagon();
+                _domain.ShedB.GenerateWagon();
+                _domain.ShedC.GenerateWagon();
 
                 _railView.printView();
-               
+                _scoreView.PrintScore(this.GetScore());
                 
                 MoveAll();
                 InitializeTimer();

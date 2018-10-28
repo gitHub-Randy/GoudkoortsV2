@@ -16,9 +16,9 @@ namespace GoudkoortV2
       
         List<LoadableObject> currentWagons;
         Score score;
-        public RailWay()
+        public RailWay(Score _score)
         {
-            score = new Score();
+            score = _score;
             currentWagons = new List<LoadableObject>();
         }
 
@@ -26,17 +26,17 @@ namespace GoudkoortV2
         public bool MoveWagons()
         {
             bool crash = false;
-            if (ShedA.Next.Object != null)
+            if (ShedA.Object != null)
             {
-                currentWagons.Add(ShedA.Next.Object);
+                currentWagons.Add(ShedA.Object);
             }
-            if (ShedB.Next.Object != null)
+            if (ShedB.Object != null)
             {
-                currentWagons.Add(ShedB.Next.Object);
+                currentWagons.Add(ShedB.Object);
             }
-            if (ShedC.Next.Object != null)
+            if (ShedC.Object != null)
             {
-                currentWagons.Add(ShedC.Next.Object);
+                currentWagons.Add(ShedC.Object);
             }
             if(wagonEnd.Object != null)
             {

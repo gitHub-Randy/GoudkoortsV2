@@ -24,19 +24,24 @@ namespace GoudkoortV2
 
         public override bool PlaceObject(LoadableObject _object)
         {
-            throw new NotImplementedException();
+           
+                this.Object = _object;
+                this.SetSymbol();
+                this.Object.CurrentPlace = this;
+                return true;
+            
         }
 
         public void GenerateWagon()
         {
             r = new Random();
-            //int x = r.Next(0, 100);
+            int x = r.Next(0, 100);
 
-            int x = 23;
+            //int x = 23;
             if (x < 24)
             {
-                this.Next.PlaceObject(new Wagon(this.Next));
-                this.Next.SetSymbol();
+                this.PlaceObject(new Wagon(this));
+             
                 Console.WriteLine("GEnerated Wagon");
             }
         }

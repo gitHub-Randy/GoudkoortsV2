@@ -6,7 +6,7 @@
 
         WaterPier _pierWater;
         Ocean _ocean;
-        Score score;
+        Score _score;
         public WaterPier PierWater
         {
             get { return this._pierWater; }
@@ -19,10 +19,11 @@
             set { this._ocean = value; }
         }
 
-        public PierRail()
+        public PierRail(Score score)
         {
             this.StandardSymbol = 'K';
             this.currentSymbol = StandardSymbol;
+            this.Score = score;
         }
 
 
@@ -30,16 +31,18 @@
         {
             if(this.PierWater.Ship != null)
             {
+                this.Object.Symbol = 'w';
                 PierWater.Ship.Load += 1;
+                this.Score.ScoreNumber += 1;
+                if (PierWater.Ship.Load == 8)
+                {
+                    this.Score.ScoreNumber += 10;
+                }
             }
-            this.Object.Symbol = 'w';
+         
 
 
-            this.score.ScoreNumber += 1;
-            if (PierWater.Ship.Load == 8)
-            {
-                this.score.ScoreNumber += 10;
-            }
+           
 
         }
 
@@ -68,8 +71,8 @@
 
         public Score Score
         {
-            get { return this.score; }
-            set { this.score = value; }
+            get { return this._score; }
+            set { this._score = value; }
         }
     }
 }
