@@ -87,6 +87,7 @@ namespace GoudkoortV2
                
                 keyInputThread.Suspend();
                 Console.WriteLine("Alles wordt nu bewogen");
+                MoveAll();
                 Thread.Sleep(3000);
 
                 i = 5;
@@ -98,7 +99,7 @@ namespace GoudkoortV2
                 _railView.printView();
                 _scoreView.PrintScore(this.GetScore());
                 
-                MoveAll();
+                
                 InitializeTimer();
                 keyInputThread.Resume();
                 

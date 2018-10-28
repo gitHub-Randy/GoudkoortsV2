@@ -30,13 +30,13 @@ namespace GoudkoortV2
 
         public override void Switch()
         {
-            if (this.CurrentSymbol == '/')
+            if (this.CurrentSymbol == '/' && this.Object == null)
             {
                 this.Next = this.UnderNext;
                 this.standardSymbol = '\\';
                 this.SetSymbol();
             }
-            else
+            else if (this.Object == null)
             {
                 this.Next = this.UpperNext;
                 this.standardSymbol = '/';

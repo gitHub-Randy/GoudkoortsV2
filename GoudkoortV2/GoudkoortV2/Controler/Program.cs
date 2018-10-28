@@ -12,7 +12,7 @@ namespace GoudkoortV2
         static void Main(string[] args)
         {
             GameController controller = new GameController();
-            Console.ReadKey();
+            
         }
     }
 }

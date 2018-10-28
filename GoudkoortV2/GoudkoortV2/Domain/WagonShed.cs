@@ -33,10 +33,10 @@ namespace GoudkoortV2
         public void GenerateWagon()
         {
             r = new Random();
-            int x = r.Next(0, 100);
-
-            //int x = 23;
-            if (x < 24)
+            int x = r.Next(0, 5);
+           
+           
+            if (x == 1)
             {
                 this.PlaceObject(new Wagon(this));
              
