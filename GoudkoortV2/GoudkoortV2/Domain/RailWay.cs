@@ -11,10 +11,13 @@ namespace GoudkoortV2
         WagonShed _shedB;
         WagonShed _shedC;
         Ocean _ocean;
+      
         List<LoadableObject> currentWagons;
+        Score score;
         public RailWay()
         {
-             
+            score = new Score();
+
         }
 
         public Ocean Ocean
@@ -36,6 +39,12 @@ namespace GoudkoortV2
         {
             get { return this._shedC; }
             set { this._shedC = value; }
+        }
+
+        public Score Score
+        {
+            get { return this.score; }
+            set { this.score = value; }
         }
     }
 }

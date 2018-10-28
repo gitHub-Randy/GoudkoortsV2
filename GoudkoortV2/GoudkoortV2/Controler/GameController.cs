@@ -150,7 +150,10 @@ namespace GoudkoortV2
         }
 
 
+        public void GetScore()
+        {
 
+        }
     }
 
 

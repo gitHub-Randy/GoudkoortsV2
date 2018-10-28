@@ -46,6 +46,7 @@
     <Compile Include="Controler\InputController.cs" />
     <Compile Include="Domain\RailSwitchGiver.cs" />
     <Compile Include="Domain\RailSwitchTaker.cs" />
+    <Compile Include="Score.cs" />
     <Compile Include="WaterPier.cs" />
     <Compile Include="Ocean.cs" />
     <Compile Include="View\ControlView.cs" />

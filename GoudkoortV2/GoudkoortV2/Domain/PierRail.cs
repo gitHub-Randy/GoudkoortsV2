@@ -6,6 +6,7 @@
 
         WaterPier _pierWater;
         Ocean _ocean;
+        Score score;
         public WaterPier PierWater
         {
             get { return this._pierWater; }
@@ -33,7 +34,12 @@
             }
             this.Object.Symbol = 'w';
 
-            System.Console.WriteLine("LOad + "+ 1);
+
+            this.score.ScoreNumber +=1;
+            if(PierWater.Ship.Load == 8)
+            {
+                this.score.ScoreNumber += 10;
+            }
 
         }
 
@@ -56,5 +62,10 @@
             this.Ocean.GenerateShip();
         }
 
+        public Score Score
+        {
+            get { return this.score; }
+            set { this.score = value; }
+        }
     }
 }
