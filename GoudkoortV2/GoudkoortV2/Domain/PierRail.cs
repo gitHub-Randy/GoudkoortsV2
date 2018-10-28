@@ -62,7 +62,7 @@
 
         public void BringInShip()
         {
-            this.Ocean.GenerateShip();
+            this.Ocean.GenerateLoadableObject();
         }
 
         public Score Score

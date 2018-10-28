@@ -1,7 +1,6 @@
 E:\repos\GoudkoortsV2\GoudkoortV2\GoudkoortV2\bin\Debug\GoudkoortV2.exe.config
 E:\repos\GoudkoortsV2\GoudkoortV2\GoudkoortV2\bin\Debug\GoudkoortV2.exe
 E:\repos\GoudkoortsV2\GoudkoortV2\GoudkoortV2\bin\Debug\GoudkoortV2.pdb
-E:\repos\GoudkoortsV2\GoudkoortV2\GoudkoortV2\obj\Debug\GoudkoortV2.csprojAssemblyReference.cache
 E:\repos\GoudkoortsV2\GoudkoortV2\GoudkoortV2\obj\Debug\GoudkoortV2.csproj.CoreCompileInputs.cache
 E:\repos\GoudkoortsV2\GoudkoortV2\GoudkoortV2\obj\Debug\GoudkoortV2.exe
 E:\repos\GoudkoortsV2\GoudkoortV2\GoudkoortV2\obj\Debug\GoudkoortV2.pdb

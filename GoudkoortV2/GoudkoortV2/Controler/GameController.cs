@@ -18,6 +18,7 @@ namespace GoudkoortV2
         private Thread timerThread;
         private InputController _inputController;
         private System.Timers.Timer aTimer;
+        private GameOverView gameOverView;
         private int i;
 
         public GameController()
@@ -32,29 +33,29 @@ namespace GoudkoortV2
             i = 5;
             timerThread = new Thread(InitializeTimer);
             _domain.Ocean = _levelMaker.Ocean;
-           
+            gameOverView = new GameOverView();
            
             _domain.ShedA = _levelMaker.ShedA;
             _domain.ShedB = _levelMaker.ShedB;
             _domain.ShedC = _levelMaker.ShedC;
             _domain.ShipEnd = _levelMaker.ShipEnd;
             _domain.WagonEnd = _levelMaker.WagonEnd;
-            _domain.Ocean.GenerateShip();
+            _domain.Ocean.GenerateLoadableObject();
             wagons = new List<LoadableObject>();
             StartInputThread();
        
 
             startTimerThread();
+            _controlView.PrintControl();
             _railView.printView();
 
 
-            Console.ReadKey();
+           
         }
-
-        public LevelMaker getLevelMaker { get { return this._levelMaker; } }
 
         public RailWayView getRailView { get { return this._railView; } }
 
+        public ControlView getControlView { get { return this._controlView; } }
 
         public void StartInputThread()
         {
@@ -92,10 +93,10 @@ namespace GoudkoortV2
 
                 i = 5;
 
-                _domain.ShedA.GenerateWagon();
-                _domain.ShedB.GenerateWagon();
-                _domain.ShedC.GenerateWagon();
-
+                _domain.ShedA.GenerateLoadableObject();
+                _domain.ShedB.GenerateLoadableObject();
+                _domain.ShedC.GenerateLoadableObject();
+                _controlView.PrintControl();
                 _railView.printView();
                 _scoreView.PrintScore(this.GetScore());
                 
@@ -114,8 +115,8 @@ namespace GoudkoortV2
 
             if (_domain.MoveWagons())
             {
-                GameOverView gameOver = new GameOverView();
-                gameOver.GameOverMessage();
+
+                gameOverView.GameOverMessage();
                 Console.Read();
                 Environment.Exit(0);
             }
@@ -127,6 +128,13 @@ namespace GoudkoortV2
         public int GetScore()
         {
             return _domain.Score.ScoreNumber;
+        }
+
+
+        public LevelMaker getLevelMaker
+        {
+            get { return this._levelMaker; }
+            set { this._levelMaker = value; }
         }
     }
 

@@ -23,10 +23,11 @@ namespace GoudkoortV2
             throw new NotImplementedException();
         }
 
-        public void GenerateShip()
+     
+
+        public override void GenerateLoadableObject()
         {
             this.Next.Object = new Ship(this.Next);
-
         }
     }
 }

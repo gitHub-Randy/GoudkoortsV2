@@ -13,6 +13,7 @@ namespace GoudkoortV2
         public WagonShed(char sym)
         {
             this.StandardSymbol = sym;
+            this.SetSymbol();
         }
 
         public override void DeleteObject(LoadableObject _object)
@@ -30,16 +31,17 @@ namespace GoudkoortV2
             
         }
 
-        public void GenerateWagon()
+     
+        public override void GenerateLoadableObject()
         {
             r = new Random();
             int x = r.Next(0, 5);
-           
-           
+
+
             if (x == 1)
             {
                 this.PlaceObject(new Wagon(this));
-             
+
                 Console.WriteLine("GEnerated Wagon");
             }
         }

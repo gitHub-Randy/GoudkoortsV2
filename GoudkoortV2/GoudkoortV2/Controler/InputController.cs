@@ -13,6 +13,7 @@ namespace GoudkoortV2.Controler
         List<RailSwitchTaker> RailSwitchTakers;
 
 
+
         public InputController(GameController gameController)
         {
             gamecontroller = gameController;
@@ -31,26 +32,32 @@ namespace GoudkoortV2.Controler
                     case ConsoleKey.D1:
                         this.RailSwitchTakers[1].Switch();
                         Console.Clear();
+                        this.gamecontroller.getControlView.PrintControl();
                         this.gamecontroller.getRailView.printView();
                         break;
                     case ConsoleKey.D2:
+
                         this.RailSwitchGivers[0].Switch();
                         Console.Clear();
+                        this.gamecontroller.getControlView.PrintControl();
                         this.gamecontroller.getRailView.printView();
                         break;
                     case ConsoleKey.D3:
                         this.RailSwitchTakers[0].Switch();
                         Console.Clear();
+                        this.gamecontroller.getControlView.PrintControl();
                         this.gamecontroller.getRailView.printView();
                         break;
                     case ConsoleKey.D4:
                         this.RailSwitchTakers[2].Switch();
                         Console.Clear();
+                        this.gamecontroller.getControlView.PrintControl();
                         this.gamecontroller.getRailView.printView();
                         break;
                     case ConsoleKey.D5:
                         this.RailSwitchGivers[1].Switch();
                         Console.Clear();
+                        this.gamecontroller.getControlView.PrintControl();
                         this.gamecontroller.getRailView.printView();
                         break;
                     default:

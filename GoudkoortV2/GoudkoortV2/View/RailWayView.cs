@@ -19,7 +19,7 @@ namespace GoudkoortV2
 
         public void printView()
         {
-            Console.Clear();
+            
             for (int i = 0; i < numberOfRows; i++)
             {
                 for (int j = 0; j < lengthOfRows - 1; j++)

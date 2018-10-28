@@ -7,6 +7,6 @@ namespace GoudkoortV2
 {
     public abstract class Shed : StaticObject
     {
-        
+        public abstract void GenerateLoadableObject();
     }
 }

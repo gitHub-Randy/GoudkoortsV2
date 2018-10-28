@@ -59,7 +59,7 @@ namespace GoudkoortV2
 
         internal void CallNextShip()
         {
-            this._ocean.GenerateShip();
+            this._ocean.GenerateLoadableObject();
         }
 
         public new void SetSymbol()
