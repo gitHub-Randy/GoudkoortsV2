@@ -9,9 +9,9 @@ namespace GoudkoortV2
     {
 
        public Ocean()
-        {
+       {
             this.StandardSymbol = '=';
-        }
+       }
 
         public override void DeleteObject(LoadableObject _object)
         {

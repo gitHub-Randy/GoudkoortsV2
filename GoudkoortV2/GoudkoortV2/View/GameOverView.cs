@@ -8,7 +8,6 @@ namespace GoudkoortV2
     public class GameOverView
     {
 
-
         public void GameOverMessage()
         {
             

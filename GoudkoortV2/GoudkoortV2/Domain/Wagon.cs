@@ -8,17 +8,12 @@ namespace GoudkoortV2
     public class Wagon : LoadableObject
 
     {
-
-
         public Wagon(StaticObject current)
         {
             this.Symbol = 'W';
             this.CurrentPlace = (StaticObject)current;
             this.CanMove = true;
         }
-
-       
-
 
         //can move foreward and handle load
         protected  void GiveLoad()
@@ -49,12 +44,8 @@ namespace GoudkoortV2
                    
                 }
                 
-                
             }
             return true;
-            
-         
-            
             
         }
     }

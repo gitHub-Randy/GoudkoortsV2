@@ -11,7 +11,6 @@ namespace GoudkoortV2
         Ship _ship;
         Ocean _ocean;
 
-
         public WaterPier()
         {
             this.StandardSymbol = '+';
@@ -42,7 +41,6 @@ namespace GoudkoortV2
         {
             throw new NotImplementedException();
         }
-
 
 
         public override bool PlaceObject(LoadableObject _object)

@@ -38,11 +38,7 @@
                 {
                     this.Score.ScoreNumber += 10;
                 }
-            }
-         
-
-
-           
+            }      
 
         }
 

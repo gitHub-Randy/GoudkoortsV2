@@ -59,7 +59,7 @@ namespace GoudkoortV2
                 {
                     if (!n.Move())
                     {
-                        crash = true ;
+                        crash = true;
                     }
                   
                 }

@@ -20,8 +20,6 @@ namespace GoudkoortV2
             throw new NotImplementedException();
         }
 
-
-
         public override bool PlaceObject(LoadableObject _object)
         {
            

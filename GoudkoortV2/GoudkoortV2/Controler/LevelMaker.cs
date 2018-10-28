@@ -170,7 +170,6 @@ namespace GoudkoortV2
                 }
 
             }
-            Console.WriteLine("HAIIII");
 
         }
 
