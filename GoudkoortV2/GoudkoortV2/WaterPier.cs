@@ -45,7 +45,7 @@ namespace GoudkoortV2
 
 
 
-        public override void PlaceObject(LoadableObject _object)
+        public override bool PlaceObject(LoadableObject _object)
         {
             if (this.Object == null)
             {
@@ -56,6 +56,7 @@ namespace GoudkoortV2
                 this.Ship.CanMove = false;
 
             }
+            return true;
         }
 
         internal void CallNextShip()

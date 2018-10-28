@@ -31,7 +31,7 @@ namespace GoudkoortV2
             set { this._load = value; }
         }
         //can move foreward and handle load
-        public override void Move()
+        public override bool Move()
         {
             if (this.CanMove)
             {
@@ -43,6 +43,11 @@ namespace GoudkoortV2
                     
                     prev.Object = null;
                     prev.SetSymbol();
+                    return true;
+                }
+                else
+                {
+                    return false;
                 }
 
             }
@@ -56,10 +61,12 @@ namespace GoudkoortV2
                     Move();
                     
                     this.PierRail.BringInShip();
-                    
+                    return true;
                     
                 }
             }
+            return true;
+            
            
         }
 

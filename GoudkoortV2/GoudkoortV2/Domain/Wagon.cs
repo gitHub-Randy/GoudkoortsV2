@@ -26,19 +26,32 @@ namespace GoudkoortV2
             throw new NotImplementedException();
         }
 
-        public override void Move()
+        public override bool Move()
         {
             if (this.CanMove)
             {
                 if (currentPlace.Next != null)
                 {
+
                     StaticObject prev = this.CurrentPlace;
-                    this.currentPlace.Next.PlaceObject(this);
-                    this.currentPlace.SetSymbol();
-                    prev.Object = null;
-                    prev.SetSymbol();
+
+                    if (this.currentPlace.Next.PlaceObject(this))
+                    {
+                        this.currentPlace.SetSymbol();
+                        prev.Object = null;
+                        prev.SetSymbol();
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                   
                 }
+                
+                
             }
+            return true;
             
          
             

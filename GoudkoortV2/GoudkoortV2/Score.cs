@@ -7,7 +7,7 @@ namespace GoudkoortV2
 {
     public class Score
     {
-        private int score;
+        private int score = 0;
 
         public Score()
         {

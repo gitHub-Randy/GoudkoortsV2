@@ -16,7 +16,7 @@ namespace GoudkoortV2
             set { this.currentPlace = value; }
         }
 
-        public abstract void Move();
+        public abstract bool Move();
 
         public char Symbol
         {

@@ -37,10 +37,10 @@ namespace GoudkoortV2
             set { this._object = value; }
         }
 
-        public abstract void PlaceObject(LoadableObject _object);
+        public abstract bool PlaceObject(LoadableObject _object);
         public abstract void DeleteObject(LoadableObject _object);
 
-        public void SetSymbol()
+        public virtual void SetSymbol()
         {
             if (this.Object == null)
             {

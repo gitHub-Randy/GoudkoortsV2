@@ -22,7 +22,7 @@ namespace GoudkoortV2
 
 
 
-        public override void PlaceObject(LoadableObject _object)
+        public override bool PlaceObject(LoadableObject _object)
         {
             throw new NotImplementedException();
         }
@@ -30,9 +30,9 @@ namespace GoudkoortV2
         public void GenerateWagon()
         {
             r = new Random();
-            int x = r.Next(0, 100);
+            //int x = r.Next(0, 100);
 
-
+            int x = 23;
             if (x < 24)
             {
                 this.Next.PlaceObject(new Wagon(this.Next));

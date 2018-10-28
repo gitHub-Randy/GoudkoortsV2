@@ -35,15 +35,15 @@
             this.Object.Symbol = 'w';
 
 
-            this.score.ScoreNumber +=1;
-            if(PierWater.Ship.Load == 8)
+            this.score.ScoreNumber += 1;
+            if (PierWater.Ship.Load == 8)
             {
                 this.score.ScoreNumber += 10;
             }
 
         }
 
-        public override void PlaceObject(LoadableObject _object)
+        public override bool PlaceObject(LoadableObject _object)
         {
             if (this.Object == null)
             {
@@ -51,7 +51,11 @@
                 this.SetSymbol();
                 this.Object.CurrentPlace = this;
                 GiveLoadToShip();
-
+                return true;
+            }
+            else
+            {
+                return false;
             }
 
 

@@ -32,26 +32,34 @@ namespace GoudkoortV2
             i = 1;
             timerThread = new Thread(InitializeTimer);
             _domain.Ocean = _levelMaker.Ocean;
-            _domain.Ocean.GenerateShip();
-            _railView.printView();
+           
+           
             _domain.ShedA = _levelMaker.ShedA;
             _domain.ShedB = _levelMaker.ShedB;
             _domain.ShedC = _levelMaker.ShedC;
-           
+            _domain.ShipEnd = _levelMaker.ShipEnd;
+            _domain.WagonEnd = _levelMaker.WagonEnd;
+            _domain.Ocean.GenerateShip();
+            _domain.ShedA.GenerateWagon();
+            _domain.Score = _levelMaker.Score;
+            //_domain.ShedB.GenerateWagon();
+            //_domain.ShedC.GenerateWagon();
             wagons = new List<LoadableObject>();
             StartInputThread();
        
 
             startTimerThread();
+            _railView.printView();
 
             while (true)
             {
-                _domain.ShedA.GenerateWagon();
+                //_domain.ShedA.GenerateWagon();
                 //_domain.ShedB.GenerateWagon();
                 //_domain.ShedC.GenerateWagon();
 
                 
                 _railView.printView();
+                this._scoreView.PrintScore(GetScore());
                 Console.WriteLine("REPRINT");
 
                 MoveAll();
@@ -102,9 +110,9 @@ namespace GoudkoortV2
 
                 i = 1;
 
-                _domain.ShedA.GenerateWagon();
-                _domain.ShedB.GenerateWagon();
-                _domain.ShedC.GenerateWagon();
+                //_domain.ShedA.GenerateWagon();
+                //_domain.ShedB.GenerateWagon();
+                //_domain.ShedC.GenerateWagon();
 
                 _railView.printView();
                
@@ -121,38 +129,22 @@ namespace GoudkoortV2
 
         public void MoveAll()
         {
-            if (_domain.ShedA.Next.Object != null)
-            {
-                wagons.Add(_domain.ShedA.Next.Object);
-            }
-            if (_domain.ShedB.Next.Object != null)
-            {
-                wagons.Add(_domain.ShedB.Next.Object);
-            }
-            if (_domain.ShedC.Next.Object != null)
-            {
-                wagons.Add(_domain.ShedC.Next.Object);
-            }
 
-            if (_domain.Ocean.Next.Object != null)
-                {
-                    wagons.Add(_domain.Ocean.Next.Object);
-                }
-            if (wagons.Count != 0)
+            if (_domain.MoveWagons())
             {
-                foreach (LoadableObject n in wagons)
-                {
-                    n.Move();
-                }
-                
+                GameOverView gameOver = new GameOverView();
+                gameOver.GameOverMessage();
+                Console.Read();
+                Environment.Exit(0);
             }
             
+           
         }
 
 
-        public void GetScore()
+        public int GetScore()
         {
-
+            return _domain.Score.ScoreNumber;
         }
     }
 

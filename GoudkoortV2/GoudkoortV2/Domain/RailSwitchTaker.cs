@@ -12,7 +12,7 @@ namespace GoudkoortV2
 
         public RailSwitchTaker()
         {
-            this.StandardSymbol = '/';
+            this.StandardSymbol = '\\';
             this.currentSymbol = StandardSymbol;
         }
         public StaticObject UpperPrev

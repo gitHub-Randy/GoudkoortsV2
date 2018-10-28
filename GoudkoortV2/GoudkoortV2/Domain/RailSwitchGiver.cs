@@ -12,7 +12,7 @@ namespace GoudkoortV2
         
         public RailSwitchGiver()
         {
-            this.StandardSymbol = '\\';
+            this.StandardSymbol = '/';
             this.currentSymbol = StandardSymbol;
         }
 
@@ -33,14 +33,31 @@ namespace GoudkoortV2
             if (this.CurrentSymbol == '/')
             {
                 this.Next = this.UnderNext;
-                this.currentSymbol = '\\';
+                this.standardSymbol = '\\';
+                this.SetSymbol();
             }
             else
             {
                 this.Next = this.UpperNext;
-                this.currentSymbol = '/';
+                this.standardSymbol = '/';
+                this.SetSymbol();
             }
 
         }
+
+        public override  void SetSymbol()
+        {
+            if(this.Object == null)
+            {
+                this.CurrentSymbol = StandardSymbol;
+            }
+            else
+            {
+                this.CurrentSymbol = this.Object.Symbol;
+            }
+            
+        }
+
+
     }
 }

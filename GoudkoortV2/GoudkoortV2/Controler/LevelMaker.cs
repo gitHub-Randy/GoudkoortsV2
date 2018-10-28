@@ -14,8 +14,10 @@ namespace GoudkoortV2
         WagonShed shedA;
         WagonShed shedB;
         WagonShed shedC;
+        EndRail shipEnd;
+        EndRail wagonEnd;
         Ocean ocean;
-
+        Score _score;
 
         String[] lines;
         int numberOfRows;
@@ -37,13 +39,20 @@ namespace GoudkoortV2
             this.ShedA = (WagonShed)Object[4, 0];
             this.ShedB = (WagonShed)Object[6, 0];
             this.ShedC = (WagonShed)Object[9, 0];
+            this.wagonEnd = (EndRail)Object[2, 0];
+            this.shipEnd = (EndRail)Object[1, 0];
             this.ocean = (Ocean)Object[1, 12];
+            _score = new Score();
         }
 
         public List<RailSwitchGiver> getSwitchGivers { get { return this.railSwitchGivers; } }
         public List<RailSwitchTaker> getSwitchTakers { get { return this.railSwitchTakers; } }
 
-
+        public Score Score
+        {
+            get { return this._score; }
+            set { this._score = value; }
+        }
         public WagonShed ShedA
         {
             get { return this.shedA; }
@@ -86,7 +95,17 @@ namespace GoudkoortV2
         }
 
 
+        public EndRail ShipEnd
+        {
+            get { return this.shipEnd; }
+            set { this.shipEnd = value; }
+        }
 
+        public EndRail WagonEnd
+        {
+            get { return this.wagonEnd; }
+            set { this.wagonEnd = value; }
+        }
 
         public void MakeObjects()
         {
@@ -141,6 +160,9 @@ namespace GoudkoortV2
                         case '+':
                             Object[i, j] = new WaterPier();
                             break;
+                        case 'D':
+                            Object[i, j] = new EndRail();
+                            break;
                         default:
                             break;
 
@@ -194,9 +216,10 @@ namespace GoudkoortV2
             PierRail pier = (PierRail)Object[2, 9];
             pier.PierWater = waterpier;
             pier.Ocean = (Ocean)Object[1, 12];
+            pier.Score = _score;
 
             
-
+            
             Ocean shipShed = (Ocean)Object[1, 12];
          
 
@@ -209,7 +232,7 @@ namespace GoudkoortV2
             LinkTwoObjects(Object[4, 3], Object[5, 3]);
             LinkTwoObjects(Object[5, 3], Object[5, 4]);
             LinkTwoObjects(Object[5, 4], Object[5, 5]);
-            LinkTwoObjects(Object[5, 5], Object[4, 5]);
+        
             LinkTwoObjects(Object[4, 5], Object[4, 6]);
             LinkTwoObjects(Object[4, 6], Object[4, 7]);
             LinkTwoObjects(Object[4, 7], Object[4, 8]);
@@ -235,12 +258,12 @@ namespace GoudkoortV2
             LinkTwoObjects(Object[6, 0], Object[6, 1]);
             LinkTwoObjects(Object[6, 1], Object[6, 2]);
             LinkTwoObjects(Object[6, 2], Object[6, 3]);
-            LinkTwoObjects(Object[6, 3], Object[5, 3]);
+          
 
             LinkTwoObjects(Object[6, 5], Object[7, 5]);
             LinkTwoObjects(Object[7, 5], Object[7, 6]);
             LinkTwoObjects(Object[7, 6], Object[8, 6]);
-            LinkTwoObjects(Object[6, 3], Object[5, 3]);
+
 
             LinkTwoObjects(Object[9, 0], Object[9, 1]);
             LinkTwoObjects(Object[9, 1], Object[9, 2]);
@@ -248,13 +271,15 @@ namespace GoudkoortV2
             LinkTwoObjects(Object[9, 3], Object[9, 4]);
             LinkTwoObjects(Object[9, 4], Object[9, 5]);
             LinkTwoObjects(Object[9, 5], Object[9, 6]);
-            LinkTwoObjects(Object[9, 6], Object[8, 6]);
-            LinkTwoObjects(Object[8, 6], Object[8, 7]);
+            
+          
             LinkTwoObjects(Object[8, 7], Object[8, 8]);
-            LinkTwoObjects(Object[8, 8], Object[7, 8]);
+       
             LinkTwoObjects(Object[7, 8], Object[6, 8]);
             LinkTwoObjects(Object[6, 8], Object[6, 9]);
-            LinkTwoObjects(Object[6, 9], Object[5, 9]);
+
+           
+
 
 
             railSwitchTakers[0].UpperPrev = Object[4, 9];
@@ -268,19 +293,20 @@ namespace GoudkoortV2
 
 
             railSwitchTakers[2].UpperPrev = Object[7, 6];
-            railSwitchTakers[2].UnderPrev = Object[8, 6];
+            railSwitchTakers[2].UnderPrev = Object[9, 6];
             railSwitchTakers[2].Next = Object[8, 7];
 
 
             railSwitchGivers[0].UnderNext = Object[6, 5];
+            railSwitchGivers[0].UpperNext = Object[4, 5];
             railSwitchGivers[0].Next = Object[4, 5];
 
             railSwitchGivers[1].UnderNext = Object[9, 8];
+            railSwitchGivers[1].UpperNext = Object[7, 8];
             railSwitchGivers[1].Next = Object[7, 8];
 
-            LinkTwoObjects(Object[7, 8], Object[6, 8]);
             LinkTwoObjects(Object[6, 8], Object[6, 9]);
-            LinkTwoObjects(Object[6, 9], Object[5, 9]);
+
 
 
             LinkTwoObjects(Object[9, 8], Object[9, 9]);

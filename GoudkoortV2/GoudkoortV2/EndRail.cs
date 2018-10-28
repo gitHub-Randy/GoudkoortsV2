@@ -5,29 +5,24 @@ using System.Text;
 
 namespace GoudkoortV2
 {
-    public  class Rail : StaticObject
+    public class EndRail : Rail
     {
-        public Rail()
-        {
-            this.StandardSymbol = '-';
-            this.currentSymbol = StandardSymbol;
-        }
 
-        public override void DeleteObject(LoadableObject _object)
+        public void deleteObject()
         {
             this.Object = null;
-            this.currentSymbol = standardSymbol;
-            
+            this.SetSymbol();
         }
 
         public override bool PlaceObject(LoadableObject _object)
         {
-             
-            if(this.Object == null)
+
+            if (this.Object == null)
             {
                 this.Object = _object;
                 this.SetSymbol();
                 this.Object.CurrentPlace = this;
+               
                 return true;
             }
             else
@@ -35,11 +30,7 @@ namespace GoudkoortV2
                 return false;
             }
 
-           
+
         }
-        // is the base Rail and can obtain a Object 
-
-
-       
     }
 }

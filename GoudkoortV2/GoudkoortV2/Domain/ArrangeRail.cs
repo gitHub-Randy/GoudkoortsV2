@@ -22,7 +22,7 @@
 
         }
 
-        public override void PlaceObject(LoadableObject _object)
+        public override bool PlaceObject(LoadableObject _object)
         {
             if (this.Object == null)
             {
@@ -30,7 +30,11 @@
                 this.SetSymbol();
                 this.Object.CurrentPlace = this;
                 LockWagon();
-
+                return true;
+            }
+            else
+            {
+                return false;
             }
 
 
