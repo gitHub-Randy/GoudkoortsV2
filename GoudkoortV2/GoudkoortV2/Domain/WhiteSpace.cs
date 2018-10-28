@@ -13,10 +13,6 @@ namespace GoudkoortV2
             this.currentSymbol = StandardSymbol;
         }
         // Can obtain a wagon and deletes it
-        public void DeleteObject()
-        {
-
-        }
 
         public override void DeleteObject(LoadableObject _object)
         {
@@ -25,7 +21,7 @@ namespace GoudkoortV2
 
         public override bool PlaceObject(LoadableObject _object)
         {
-            return false;
+            throw new NotImplementedException();
         }
     }
 }

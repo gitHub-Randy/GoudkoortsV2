@@ -8,10 +8,10 @@ namespace GoudkoortV2
 {
     class Program
     {
-        public MainController controller;
+        public GameController controller;
         static void Main(string[] args)
         {
-             MainController controller = new MainController();
+            GameController controller = new GameController();
             Console.ReadKey();
         }
     }

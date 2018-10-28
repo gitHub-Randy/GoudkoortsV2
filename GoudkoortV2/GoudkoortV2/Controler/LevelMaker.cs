@@ -174,18 +174,6 @@ namespace GoudkoortV2
 
         }
 
-        //public void PrintArr()
-        //{
-        //    for (int i = 0; i < numberOfRows ; i++)
-        //    {
-        //        for (int j = 0; j < lengthOfRows-1; j++)
-        //        {
-        //            Console.Write(Object[i,j].Symbol);
-        //        }
-        //        Console.WriteLine();
-        //    }
-        //}
-
 
         public void LinkTwoObjects(StaticObject current, StaticObject Next)
         {
@@ -195,7 +183,6 @@ namespace GoudkoortV2
 
         public void Link()
         {
-
 
             LinkTwoObjects(Object[1, 12], Object[1, 11]);
             LinkTwoObjects(Object[1, 11], Object[1, 10]);
@@ -220,18 +207,13 @@ namespace GoudkoortV2
            
             pier.PierWater = waterpier;
 
-
             pier.Next = Object[2, 8];
 
             Object[2, 8].Next = Object[2, 7];
            
-
-           
             Ocean shipShed = (Ocean)Object[1, 12];
          
-
             waterpier.Ocean = shipShed;
-
 
             LinkTwoObjects(Object[4, 0], Object[4, 1]);
             LinkTwoObjects(Object[4, 1], Object[4, 2]);
@@ -252,8 +234,7 @@ namespace GoudkoortV2
             LinkTwoObjects(Object[3, 11], Object[2, 11]);
             LinkTwoObjects(Object[2, 11], Object[2, 10]);
             LinkTwoObjects(Object[2, 10], Object[2, 9]);
-           
-            
+                    
             LinkTwoObjects(Object[2, 7], Object[2, 6]);
             LinkTwoObjects(Object[2, 6], Object[2, 5]);
             LinkTwoObjects(Object[2, 5], Object[2, 4]);
@@ -266,11 +247,9 @@ namespace GoudkoortV2
             LinkTwoObjects(Object[6, 1], Object[6, 2]);
             LinkTwoObjects(Object[6, 2], Object[6, 3]);
           
-
             LinkTwoObjects(Object[6, 5], Object[7, 5]);
             LinkTwoObjects(Object[7, 5], Object[7, 6]);
             LinkTwoObjects(Object[7, 6], Object[8, 6]);
-
 
             LinkTwoObjects(Object[9, 0], Object[9, 1]);
             LinkTwoObjects(Object[9, 1], Object[9, 2]);
@@ -278,16 +257,11 @@ namespace GoudkoortV2
             LinkTwoObjects(Object[9, 3], Object[9, 4]);
             LinkTwoObjects(Object[9, 4], Object[9, 5]);
             LinkTwoObjects(Object[9, 5], Object[9, 6]);
-            
-          
+                
             LinkTwoObjects(Object[8, 7], Object[8, 8]);
        
             LinkTwoObjects(Object[7, 8], Object[6, 8]);
             LinkTwoObjects(Object[6, 8], Object[6, 9]);
-
-           
-
-
 
             railSwitchTakers[0].UpperPrev = Object[4, 9];
             railSwitchTakers[0].UnderPrev = Object[6, 9];
@@ -298,11 +272,9 @@ namespace GoudkoortV2
             railSwitchTakers[1].Next = Object[5, 4];
             LinkTwoObjects(Object[5, 4], Object[5, 5]);
 
-
             railSwitchTakers[2].UpperPrev = Object[7, 6];
             railSwitchTakers[2].UnderPrev = Object[9, 6];
             railSwitchTakers[2].Next = Object[8, 7];
-
 
             railSwitchGivers[0].UnderNext = Object[6, 5];
             railSwitchGivers[0].UpperNext = Object[4, 5];
@@ -314,13 +286,10 @@ namespace GoudkoortV2
 
             LinkTwoObjects(Object[6, 8], Object[6, 9]);
 
-
-
             LinkTwoObjects(Object[9, 8], Object[9, 9]);
             LinkTwoObjects(Object[9, 9], Object[9, 10]);
             LinkTwoObjects(Object[9, 10], Object[9, 11]);
             LinkTwoObjects(Object[9, 11], Object[10, 11]);
-
 
             LinkTwoObjects(Object[9, 12], Object[10, 12]);
 
@@ -337,40 +306,6 @@ namespace GoudkoortV2
     
 
         }
-
-
-
-
-
-
-
-
-
-        //public void MakeObjects()
-        //{
-        //    shedA = new Shed();
-        //    shedB = new Shed();
-        //    shedC = new Shed();
-
-        //    for (int i = 0; i < 47; i++)
-        //    {
-        //        railObjects.Add(new Rail());
-        //    }
-
-        //    railSwitches[0] = new RailSwitchTaker();
-        //    railSwitches[1] = new RailSwitchGiver();
-        //    railSwitches[2] = new RailSwitchTaker();
-        //    railSwitches[3] = new RailSwitchTaker();
-        //    railSwitches[4] = new RailSwitchGiver();
-
-        //    for (int i = 0; i < 8; i++)
-        //    {
-        //        arrangeRails.Add(new ArrangeRail());
-        //    }
-
-
-        //}
-
 
     }
 }
