@@ -13,21 +13,19 @@ namespace GoudkoortV2
             this.StandardSymbol = '=';
        }
 
-        public override void DeleteObject(LoadableObject _object)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override bool PlaceObject(LoadableObject _object)
-        {
-            throw new NotImplementedException();
-        }
+      
+  
 
      
 
         public override void GenerateLoadableObject()
         {
             this.Next.Object = new Ship(this.Next);
+        }
+
+        public override bool PlaceObject(LoadableObject _object)
+        {
+            throw new NotImplementedException();
         }
     }
 }

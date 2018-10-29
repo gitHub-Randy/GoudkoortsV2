@@ -14,10 +14,7 @@ namespace GoudkoortV2
         }
         // Can obtain a wagon and deletes it
 
-        public override void DeleteObject(LoadableObject _object)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public override bool PlaceObject(LoadableObject _object)
         {

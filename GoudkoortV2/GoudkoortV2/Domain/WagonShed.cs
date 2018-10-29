@@ -16,10 +16,7 @@ namespace GoudkoortV2
             this.SetSymbol();
         }
 
-        public override void DeleteObject(LoadableObject _object)
-        {
-            throw new NotImplementedException();
-        }
+      
 
         public override bool PlaceObject(LoadableObject _object)
         {

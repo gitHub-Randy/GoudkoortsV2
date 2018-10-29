@@ -38,7 +38,7 @@ namespace GoudkoortV2
         }
 
         public abstract bool PlaceObject(LoadableObject _object);
-        public abstract void DeleteObject(LoadableObject _object);
+     
 
         public virtual void SetSymbol()
         {

@@ -13,13 +13,7 @@ namespace GoudkoortV2
             this.currentSymbol = StandardSymbol;
         }
 
-        public override void DeleteObject(LoadableObject _object)
-        {
-            this.Object = null;
-            this.currentSymbol = standardSymbol;
-            
-        }
-
+       
         public override bool PlaceObject(LoadableObject _object)
         {
              
